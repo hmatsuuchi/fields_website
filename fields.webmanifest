@@ -1,0 +1,7 @@
+{
+    "name": "fields.jp",
+    "icons": [
+        { "src": "assets/img/identity/icon_02.png", "type": "image/png", "sizes": "192x192" },
+        { "src": "assets/img/identity/icon_03.png", "type": "image/png", "sizes": "512x512" }
+    ]
+}

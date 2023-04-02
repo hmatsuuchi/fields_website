@@ -1,0 +1,542 @@
+/* NAVIGATION */
+#navigation {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    
+    pointer-events: none;
+
+    z-index: 99;
+}
+
+#navigation-primary-container {
+    display: grid;
+    justify-items: right;
+}
+
+#menu-button {
+    margin: 1.5rem;
+
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 20% 5%;
+
+    pointer-events: auto;
+
+    -webkit-tap-highlight-color: transparent;
+
+    background-color: #f6416c;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, .2);
+
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+#hamburger-container {
+    width: 55%;
+    height: 45%;
+
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    align-content: space-around;
+}
+
+#line-1 {
+    grid-row: 1;
+
+    width: 100%;
+    border-radius: 99px;
+
+    background-color: #ffffff;
+}
+
+#line-2 {
+    grid-row: 3;
+
+    width: 100%;
+    border-radius: 99px;
+
+    background-color: #ffffff;
+}
+
+#line-3 {
+    grid-row: 5;
+
+    width: 100%;
+    border-radius: 99px;
+
+    background-color: #ffffff;
+}
+
+#menu-list-container {
+    margin-right: .5rem;
+
+    display: grid;
+    grid-auto-flow: column;
+    justify-items: right;
+    grid-row-gap: 2rem;
+}
+
+.nav-item {
+    position: relative;
+
+    padding: .4rem .8rem;
+    border-radius: .4rem .8rem;
+
+    font-size: 1.2rem;
+    color: #ffffff;
+    white-space: nowrap;
+    text-decoration: none;
+
+    background-color: #f6416c;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, .2);
+    transform-origin: 100% 50%;
+
+    transform: scale(0);
+    -webkit-transform: scale(0);
+}
+
+.nav-icon {
+    position: relative;
+
+    width: 2rem;
+    height: 2rem;
+    left: -50%;
+    top: -50%;
+    border-radius: 50%;
+
+    background-color: #ffffff;
+    border: solid 2px #f6416c;
+
+    transform: scale(0);
+    -webkit-transform: scale(0);
+
+    grid-column: 2;
+
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#nav-icon-1 {
+    background-image: url('../img/temporary.svg');
+}
+
+#nav-icon-2 {
+    background-image: url('../img/temporary.svg');
+}
+
+#nav-icon-3 {
+    background-image: url('../img/temporary.svg');
+}
+
+#nav-icon-4 {
+    background-image: url('../img/temporary.svg');
+}
+
+#nav-icon-5 {
+    background-image: url('../img/temporary.svg');
+}
+
+/* NAVIGATION - ANIMATION - HAMBURGER MENU */
+.menu-click-animation-in {
+    animation: menu-click-animation-in 400ms ease-out forwards;
+}
+
+@keyframes menu-click-animation-in {
+    0% {transform: scale(1); -webkit-transform: scale(1); border-radius: 20% 5%;}
+    50% {transform: scale(.85); -webkit-transform: scale(.85);}
+    100% {transform: scale(1); -webkit-transform: scale(1); border-radius: 10% 65%;}
+}
+
+.menu-click-animation-out {
+    animation: menu-click-animation-out 400ms ease-out forwards;
+}
+
+@keyframes menu-click-animation-out {
+    0% {transform: scale(1); -webkit-transform: scale(1); border-radius: 10% 65%;}
+    50% {transform: scale(.85); -webkit-transform: scale(.85);}
+    100% {transform: scale(1); -webkit-transform: scale(1); border-radius: 20% 5%;}
+}
+
+.line-1-animation-in {
+    animation: line-1-animation-in 400ms ease-out forwards;
+}
+
+@keyframes line-1-animation-in {
+    0% {transform: translate(0, 0) rotate(0); -webkit-transform: translate(0, 0) rotate(0);} /* percentage based translates result in jerky animations */
+    50% {transform: translate(0, calc(4.5rem*.45/5*2)) rotate(0); -webkit-transform: translate(0, calc(4.5rem*.45/5*2)) rotate(0);}
+    100% {transform: translate(0, calc(4.5rem*.45/5*2)) rotate(45deg); -webkit-transform: translate(0, calc(4.5rem*.45/5*2)) rotate(45deg);}
+}
+
+.line-1-animation-out {
+    animation: line-1-animation-out 400ms ease-out forwards;
+}
+
+@keyframes line-1-animation-out {
+    0% {transform: translate(0, calc(4.5rem*.45/5*2)) rotate(45deg); -webkit-transform: translate(0, calc(4.5rem*.45/5*2)) rotate(45deg);} /* percentage based translates result in jerky animations */
+    50% {transform: translate(0, calc(4.5rem*.45/5*2)) rotate(0); -webkit-transform: translate(0, calc(4.5rem*.45/5*2)) rotate(0);}
+    100% {transform: translate(0, 0) rotate(0); -webkit-transform: translate(0, 0) rotate(0);}
+}
+
+.line-2-animation-in {
+    animation: line-2-animation-in 400ms ease-out forwards;
+}
+
+@keyframes line-2-animation-in {
+    0% {background-color: #ffffff;}
+    100% {background-color: transparent;}
+}
+
+.line-2-animation-out {
+    animation: line-2-animation-out 400ms ease-out forwards;
+}
+
+@keyframes line-2-animation-out {
+    0% {background-color: transparent;}
+    100% {background-color: #ffffff;}
+}
+
+.line-3-animation-in {
+    animation: line-3-animation-in 400ms ease-out forwards;
+}
+
+@keyframes line-3-animation-in {
+    0% {transform: translate(0, 0) rotate(0); -webkit-transform: translate(0, 0) rotate(0);}
+    50% {transform: translate(0, calc(-4.5rem*.45/5*2)) rotate(0); -webkit-transform: translate(0, calc(-4.5rem*.45/5*2)) rotate(0);} /* percentage based translates result in jerky animations */
+    100% {transform: translate(0, calc(-4.5rem*.45/5*2)) rotate(-45deg); -webkit-transform: translate(0, calc(-4.5rem*.45/5*2)) rotate(-45deg);} /* percentage based translates result in jerky animations */
+}
+
+.line-3-animation-out {
+    animation: line-3-animation-out 400ms ease-out forwards;
+}
+
+@keyframes line-3-animation-out {
+    0% {transform: translate(0, calc(-4.5rem*.45/5*2)) rotate(-45deg); -webkit-transform: translate(0, calc(-4.5rem*.45/5*2)) rotate(-45deg);} /* percentage based translates result in jerky animations */
+    50% {transform: translate(0, calc(-4.5rem*.45/5*2)) rotate(0); -webkit-transform: translate(0, calc(-4.5rem*.45/5*2)) rotate(0);} /* percentage based translates result in jerky animations */
+    100% {transform: translate(0, 0) rotate(0); -webkit-transform: translate(0, 0) rotate(0);}
+}
+
+/* NAVIGATION - ANIMATION - NAVIGATION LIST ITEMS */
+.nav-list-1-in {
+    animation: nav-list-in 400ms 300ms ease-out both;
+}
+
+.nav-list-1-out {
+    animation: nav-list-out 300ms ease-out both;
+}
+
+.nav-list-2-in {
+    animation: nav-list-in 400ms 225ms ease-out both;
+}
+
+.nav-list-2-out {
+    animation: nav-list-out 300ms 75ms ease-out both;
+}
+
+.nav-list-3-in {
+    animation: nav-list-in 400ms 150ms ease-out both;
+}
+
+.nav-list-3-out {
+    animation: nav-list-out 300ms 150ms ease-out both;
+}
+
+.nav-list-4-in {
+    animation: nav-list-in 400ms 75ms ease-out both;
+}
+
+.nav-list-4-out {
+    animation: nav-list-out 300ms 225ms ease-out both;
+}
+
+.nav-list-5-in {
+    animation: nav-list-in 400ms ease-out both;
+}
+
+.nav-list-5-out {
+    animation: nav-list-out 300ms 300ms ease-out both;
+}
+
+.nav-icon-1-in {
+    animation: nav-list-in 400ms 300ms ease-out both;
+}
+
+.nav-icon-1-out {
+    animation: nav-list-out 300ms ease-out both;
+}
+
+.nav-icon-2-in {
+    animation: nav-list-in 400ms 225ms ease-out both;
+}
+
+.nav-icon-2-out {
+    animation: nav-list-out 300ms 75ms ease-out both;
+}
+
+.nav-icon-3-in {
+    animation: nav-list-in 400ms 150ms ease-out both;
+}
+
+.nav-icon-3-out {
+    animation: nav-list-out 300ms 150ms ease-out both;
+}
+
+.nav-icon-4-in {
+    animation: nav-list-in 400ms 75ms ease-out both;
+}
+
+.nav-icon-4-out {
+    animation: nav-list-out 300ms 225ms ease-out both;
+}
+
+.nav-icon-5-in {
+    animation: nav-list-in 400ms ease-out both;
+}
+
+.nav-icon-5-out {
+    animation: nav-list-out 300ms 300ms ease-out both;
+}
+
+@keyframes nav-list-in {
+    0% {
+        transform: scale(0, 0) translateX(calc(5rem));
+        -webkit-transform: scale(0, 0) translateX(calc(5rem));
+    }
+    70% {
+        transform: scale(1.15, 1.15);
+        -webkit-transform: scale(1.15, 1.15);
+    }
+    100% {
+        transform: scale(1, 1) translateX(0);
+        -webkit-transform: scale(1, 1) translateX(0);
+    }
+}
+
+@keyframes nav-list-out {
+    0% {
+        transform: scale(1, 1) translateX(0);
+        -webkit-transform: scale(1, 1) translatex(0);
+    }
+    100% {
+        transform: scale(1, 1) translateX(calc(15rem));
+        -webkit-transform: scale(1, 1) translateX(calc(15rem));
+    }
+}
+
+/* ======= MEDIA QUERY ======= */
+/* ====== 768 PX AND UP ======= */
+@media (min-width: 768px) {
+    /* NAVIGATION */
+    #navigation {
+        width: 100%;
+        right: inherit;
+        bottom: inherit;
+
+        display: grid;
+        justify-content: center;
+    }
+
+    #navigation-primary-container {
+        width: 100vw;
+        max-width: 1200px;
+        justify-items: left;
+    }
+
+    #menu-list-container {
+        order: 2;
+        justify-items: left;
+        margin-left: 4rem;
+    }
+
+    #menu-button {
+        order: 1;
+        width: 5rem;
+        height: 5rem;
+        margin-bottom: 3rem;
+    }
+
+    .nav-item {
+        transform-origin: 0% 50%;
+        font-size: 1.4rem;
+        grid-column: 2;
+    }
+
+    .nav-icon {
+        grid-column: 1;
+        left: 50%;
+        top: -50%;
+    }
+
+    /* NAVIGATION - ANIMATION - NAVIGATION LIST ITEMS */
+    @keyframes line-1-animation-in {
+        0% {
+            transform: translate(0, 0) rotate(0);
+            -webkit-transform: translate(0, 0) rotate(0);
+        }
+        50% {
+            transform: translate(0, calc(5rem*.45/5*2)) rotate(0); /* percentage based translates result in jerky animations */
+            -webkit-transform: translate(0, calc(5rem*.45/5*2)) rotate(0);
+        }
+        100% {
+            transform: translate(0, calc(5rem*.45/5*2)) rotate(45deg);
+            -webkit-transform: translate(0, calc(5rem*.45/5*2)) rotate(45deg);
+        }
+    }
+    
+    @keyframes line-1-animation-out {
+        0% {
+            transform: translate(0, calc(5rem*.45/5*2)) rotate(45deg);
+            -webkit-transform: translate(0, calc(5rem*.45/5*2)) rotate(45deg); /* percentage based translates result in jerky animations */
+        }
+        50% {
+            transform: translate(0, calc(5rem*.45/5*2)) rotate(0);
+            -webkit-transform: translate(0, calc(5rem*.45/5*2)) rotate(0);
+        }
+        100% {
+            transform: translate(0, 0) rotate(0);
+            -webkit-transform: translate(0, 0) rotate(0);
+        }
+    }
+    
+    @keyframes line-3-animation-in {
+        0% {
+            transform: translate(0, 0) rotate(0);
+            -webkit-transform: translate(0, 0) rotate(0);
+        }
+        50% {
+            transform: translate(0, calc(-5rem*.45/5*2)) rotate(0);
+            -webkit-transform: translate(0, calc(-5rem*.45/5*2)) rotate(0); /* percentage based translates result in jerky animations */
+        }
+        100% {
+            transform: translate(0, calc(-5rem*.45/5*2)) rotate(-45deg);
+            -webkit-transform: translate(0, calc(-5rem*.45/5*2)) rotate(-45deg); /* percentage based translates result in jerky animations */
+        }
+    }
+    
+    @keyframes line-3-animation-out {
+        0% {
+            transform: translate(0, calc(-5rem*.45/5*2)) rotate(-45deg);
+            -webkit-transform: translate(0, calc(-5rem*.45/5*2)) rotate(-45deg); /* percentage based translates result in jerky animations */
+        }
+        50% {
+            transform: translate(0, calc(-5rem*.45/5*2)) rotate(0);
+            -webkit-transform: translate(0, calc(-5rem*.45/5*2)) rotate(0); /* percentage based translates result in jerky animations */
+        }
+        100% {
+            transform: translate(0, 0) rotate(0);
+            -webkit-transform: translate(0, 0) rotate(0);
+        }
+    }
+
+    .nav-list-1-in {
+        animation: nav-list-in 400ms ease-out both;
+    }
+    
+    .nav-list-1-out {
+        animation: nav-list-out 300ms 300ms ease-out both;
+    }
+    
+    .nav-list-2-in {
+        animation: nav-list-in 400ms 75ms ease-out both;
+    }
+    
+    .nav-list-2-out {
+        animation: nav-list-out 300ms 225ms ease-out both;
+    }
+    
+    .nav-list-3-in {
+        animation: nav-list-in 400ms 150ms ease-out both;
+    }
+    
+    .nav-list-3-out {
+        animation: nav-list-out 300ms 150ms ease-out both;
+    }
+    
+    .nav-list-4-in {
+        animation: nav-list-in 400ms 225ms ease-out both;
+    }
+    
+    .nav-list-4-out {
+        animation: nav-list-out 300ms 75ms ease-out both;
+    }
+    
+    .nav-list-5-in {
+        animation: nav-list-in 400ms 300ms ease-out both;
+    }
+    
+    .nav-list-5-out {
+        animation: nav-list-out 300ms ease-out both;
+    }
+
+    .nav-icon-1-in {
+        animation: nav-list-in 400ms ease-out both;
+    }
+    
+    .nav-icon-1-out {
+        animation: nav-list-out 300ms 300ms ease-out both;
+    }
+    
+    .nav-icon-2-in {
+        animation: nav-list-in 400ms 75ms ease-out both;
+    }
+    
+    .nav-icon-2-out {
+        animation: nav-list-out 300ms 225ms ease-out both;
+    }
+    
+    .nav-icon-3-in {
+        animation: nav-list-in 400ms 150ms ease-out both;
+    }
+    
+    .nav-icon-3-out {
+        animation: nav-list-out 300ms 150ms ease-out both;
+    }
+    
+    .nav-icon-4-in {
+        animation: nav-list-in 400ms 225ms ease-out both;
+    }
+    
+    .nav-icon-4-out {
+        animation: nav-list-out 300ms 75ms ease-out both;
+    }
+    
+    .nav-icon-5-in {
+        animation: nav-list-in 400ms 300ms ease-out both;
+    }
+    
+    .nav-icon-5-out {
+        animation: nav-list-out 300ms ease-out both;
+    }
+
+    @keyframes nav-list-in {
+        0% {
+            transform: scale(0, 0) translateX(calc(-5rem));
+            -webkit-transform: scale(0, 0) translateX(calc(-5rem));
+            opacity: 0;
+        }
+        70% {
+            transform: scale(1.15, 1.15);
+            -webkit-transform: scale(1.15, 1.15);
+        }
+        100% {
+            transform: scale(1, 1) translateX(0);
+            -webkit-transform: scale(1, 1) translateX(0);
+            opacity: 1;
+        }
+    }
+    
+    @keyframes nav-list-out {
+        0% {
+            transform: scale(1, 1) translateX(0);
+            -webkit-transform: scale(1, 1) translatex(0);
+            opacity: 1;
+        }
+        100% {
+            transform: scale(1, 1) translateX(calc(5rem));
+            -webkit-transform: scale(1, 1) translateX(calc(5rem));
+            opacity: 0;
+        }
+    }
+}
