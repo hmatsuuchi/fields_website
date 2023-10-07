@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap');
+
+#autumn-2023-campaign {
+    position: relative;
+    display: grid;
+    margin: 2rem 0 1rem 0;
+    overflow-x: hidden;
+
+    height: 303vw;
+    max-height: calc(1200px + 540px);
+
+    font-family: 'Klee One', cursive;
+    font-weight: 600;
+    color: rgb(50, 50, 50);
+}
+
+/* GENERIC BUBBLE STYLING */
+#autumn-2023-campaign .bubble {
+    position: absolute;
+    border-radius: 50%;
+
+    background-color: #F6416C;
+
+    display: grid;
+    place-content: center;
+
+    text-align: center;
+}
+
+#autumn-2023-campaign .bubble-inner {
+    border-radius: 50%;
+
+    background-color: #F8F3D4;
+    border: .2rem solid #fff;
+
+    box-shadow: 0 0 .3rem .3rem rgba(0, 0, 0, .2) inset;
+
+    display: grid;
+    place-content: center;
+}
+
+/* LAYOUT 1 */
+/* SM BUBBLE */
+#autumn-2023-campaign .bubble-sm {
+    height: 50vw;
+    width: 50vw;
+}
+
+#autumn-2023-campaign .bubble-sm-inner {
+    z-index: 1;
+
+    height: 35vw;
+    width: 35vw;
+}
+
+/* MD BUBBLE */
+#autumn-2023-campaign .bubble-md {
+    height: 70vw;
+    width: 70vw;
+}
+
+#autumn-2023-campaign .bubble-md-inner {
+    z-index: 1;
+
+    height: 55vw;
+    width: 55vw;
+}
+
+/* MD-LG BUBBLE */
+#autumn-2023-campaign .bubble-md-lg {
+    height: 85vw;
+    width: 85vw;
+}
+
+#autumn-2023-campaign .bubble-md-lg-inner {
+    z-index: 1;
+
+    height: 70vw;
+    width: 70vw;
+}
+
+#autumn-2023-campaign .md-lg-text-container {
+    padding: 1.5rem;
+    margin-top: 2vw;
+}
+
+/* SECTION BUBBLE STYLING */
+#campaign-title {
+    left: -2vw;
+
+    font-size: 1.3rem;
+}
+
+#campaign-title .bubble-md-inner {
+    transform: rotate(-15deg);
+}
+
+#campaign-description {
+    right: -5vw;
+    top: 56vw;
+
+    font-size: .7rem;
+}
+
+#autumn-2023-campaign .campaign-point {
+    font-size: .8rem;
+}
+
+#campaign-point-1 {
+    top: 127vw;
+    left: 11vw;
+}
+
+#campaign-point-2 {
+    top: 154vw;
+    right: 5vw;
+}
+
+#campaign-point-3 {
+    top: 169vw;
+    left: 5vw;
+}
+
+#campaign-call-to-action {
+    top: 206vw;
+    right: 10vw;
+}
+
+#campaign-contact-button {
+    background-color: #00b8a9;
+    padding: .2rem .3rem;
+    margin-top: .3rem;
+
+    justify-self: center;
+
+    color: #fff;
+    border-radius: 99rem;
+}
+
+#autumn-2023-campaign .call-to-action-text-container {
+    margin-top: 1rem;
+
+    font-size: .65rem;
+
+    display: grid;
+}
+
+#campaign-clarification {
+    position: absolute;
+    bottom: 0;
+    padding: 0 1rem;
+    font-size: .7rem;
+}
+
+@media (min-width: 350px) {
+    #autumn-2023-campaign {
+        height: 299vw;
+    }
+
+    #campaign-title {
+        font-size: 1.5rem;
+    }
+    
+    #campaign-description {
+        font-size: .9rem;
+    }
+
+    #autumn-2023-campaign .campaign-point {
+        font-size: .95rem;
+    }
+
+    #campaign-contact-button {
+        padding: .4rem .7rem;
+        margin-top: .5rem;
+    }
+    
+    #autumn-2023-campaign .call-to-action-text-container {
+        margin-top: .8rem;
+        font-size: .7rem;
+    }
+}
+
+@media (min-width: 400px) {
+    #autumn-2023-campaign {
+        height: 287vw;
+    }
+
+    #campaign-title {
+        font-size: 1.8rem;
+    }
+    
+    #campaign-description {
+        font-size: 1rem;
+    }
+
+    #autumn-2023-campaign .campaign-point {
+        font-size: 1.2rem;
+    }
+
+    #campaign-contact-button {
+        padding: .5rem .9rem;
+        margin-top: .75rem;
+    }
+    
+    #autumn-2023-campaign .call-to-action-text-container {
+        margin-top: .8rem;
+        font-size: .8rem;
+    }
+}
+
+@media (min-width: 450px) {
+    #campaign-title {
+        font-size: 2rem;
+    }
+    
+    #campaign-description {
+        font-size: 1.1rem;
+    }
+
+    #autumn-2023-campaign .campaign-point {
+        font-size: 1.2rem;
+    }
+
+    #campaign-clarification {
+        font-size: .8rem;
+    }
+    
+    #autumn-2023-campaign .call-to-action-text-container {
+        font-size: .9rem;
+    }
+}
+
+@media (min-width: 500px) {
+    #campaign-title {
+        font-size: 2.2rem;
+    }
+    
+    #campaign-description {
+        font-size: 1.2rem;
+    }
+
+    #autumn-2023-campaign .campaign-point {
+        font-size: 1.3rem;
+    }
+
+    #campaign-clarification {
+        font-size: .9rem;
+    }
+
+    #autumn-2023-campaign .call-to-action-text-container {
+        font-size: 1rem;
+        margin-top: .9rem;
+    }
+}
+
+@media (min-width: 550px) {
+    #campaign-title {
+        font-size: 2.4rem;
+    }
+    
+    #campaign-description {
+        font-size: 1.3rem;
+    }
+
+    #autumn-2023-campaign .campaign-point {
+        font-size: 1.4rem;
+    }
+
+    #autumn-2023-campaign .call-to-action-text-container {
+        font-size: 1.1rem;
+        margin-top: 1rem;
+    }
+}
+
+/* LAYOUT 2 */
+@media (min-width: 576px) {
+
+}
+
+/* LAYOUT 3 */
+@media (min-width: 768px) {
+    #autumn-2023-campaign {
+        height: 178vw;
+    }
+
+    /* SM BUBBLE */
+    #autumn-2023-campaign .bubble-sm {
+        height: 40vw;
+        width: 40vw;
+    }
+
+    #autumn-2023-campaign .bubble-sm-inner {
+        height: 25vw;
+        width: 25vw;
+    }
+
+    /* MD BUBBLE */
+    #autumn-2023-campaign .bubble-md {
+        height: 50vw;
+        width: 50vw;
+    }
+
+    #autumn-2023-campaign .bubble-md-inner {
+        height: 35vw;
+        width: 35vw;
+    }
+
+    #campaign-title {
+        font-size: 2.1rem;
+    }
+
+    /* MD-LG BUBBLE */
+    #autumn-2023-campaign .bubble-md-lg {
+        height: 70vw;
+        width: 70vw;
+    }
+
+    #autumn-2023-campaign .bubble-md-lg-inner {
+        height: 55vw;
+        width: 55vw;
+    }
+
+    #campaign-description {
+        top: 6rem;
+        font-size: 1.5rem;
+    }
+
+    .campaign-point {
+        font-size: 1.5rem;
+    }
+
+    #campaign-point-1 {
+        top: 41vw;
+        left: 6vw;
+    }
+    
+    #campaign-point-2 {
+        top: 67vw;
+        right: auto;
+        left: 24vw;
+    }
+    
+    #campaign-point-3 {
+        top: 74vw;
+        right: 6vw;
+        left: auto;
+    }
+
+    #campaign-call-to-action {
+        top: 98vw;
+        left: 14vw;
+    }
+
+    #campaign-call-to-action.bubble-md {
+        width: 70vw;
+        height: 70vw;
+    }
+
+    #campaign-call-to-action .bubble-md-inner {
+        width: 55vw;
+        height: 55vw;
+    }
+
+    #campaign-call-to-action .call-to-action-text-container {
+        font-size: 1.6rem;
+        margin-top: 2rem;
+    }
+
+    #campaign-clarification {
+        font-size: 1rem;
+    }
+}
+
+/* LAYOUT 4 */
+@media (min-width: 992px) {
+
+}
