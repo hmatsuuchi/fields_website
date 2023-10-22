@@ -112,10 +112,6 @@ a {
     margin: 0 auto;
 }
 
-.entrance-fee {
-    /* text-decoration: line-through; */
-}
-
 /* TEAM */
 #team {
     background-color: #ffde7d;
@@ -549,6 +545,11 @@ a {
 }
 
 /* =============== 3.2 - ALL ONES CAMPAIGN =============== */
+#latest {
+    width: 100vw;
+    overflow: hidden;
+}
+
 #latest .primary-container {
     background-color: #F8F3D4;
     background-image: url("/assets/img/all_ones_campaign/abstract_02_15.svg");

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
 
 #autumn-2023-campaign {
     position: relative;
@@ -8,9 +8,138 @@
 
     height: 303vw;
 
-    font-family: 'Klee One', cursive;
-    font-weight: 600;
-    color: rgb(50, 50, 50);
+    font-family: 'RocknRoll One', sans-serif;
+    color: rgb(80, 80, 80);
+}
+
+/* BACKGROUND BUBBLES */
+#autumn-2023-campaign .background-bubbles .bubble {
+    position: absolute;
+    border-radius: 50%;
+    
+    background-color: #6A2C70;
+    border: .7rem solid #B83B5E;
+}
+
+#autumn-2023-campaign a {
+    color: rgb(80, 80, 80);
+}
+
+a#campaign-contact-button {
+    color: #fff;
+}
+
+#autumn-2023-campaign .background-bubbles .big-bubble {
+    width: 180vw;
+    height: 180vw;
+
+    position: absolute;
+    border-radius: 50%;
+    
+    background-color: #F9ED69;
+}
+
+#autumn-2023-campaign .background-bubbles .bubble-md {
+    width: 60vw;
+    height: 60vw;    
+}
+
+#autumn-2023-campaign .background-bubbles .bubble-sm {
+    width: 30vw;
+    height: 30vw;    
+}
+
+#big-bubble-1 {
+    top: 2vw;
+    right: -40vw;
+}
+
+#big-bubble-2 {
+    top: 87vw;
+    left: -40vw;
+}
+
+#background-bubble-1 {
+    right: 3vw;
+    top: 10vw;
+}
+
+#background-bubble-2 {
+    left: 7vw;
+    top: 57vw;
+}
+
+#background-bubble-3 {
+    left: 6vw;
+    top: 112vw;
+}
+
+#background-bubble-4 {
+    right: 5vw;
+    top: 185vw;
+}
+
+#background-bubble-5 {
+    left: 8vw;
+    top: 240vw;
+}
+
+/* PHOTO BUBBLE */
+.photo-bubble {
+    z-index: 2;
+    position: absolute;
+    border: min(5vw, 60px) solid #F08A5D;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 .5rem .3rem rgba(0, 0, 0, .2);
+}
+
+#photo-1 {
+    background-image: url('/assets/img/all_ones_campaign/all_ones_campaign_01_700.jpg');
+    background-size: cover;
+    background-position: 30% 50%;
+
+    height: 35vw;
+    width: 35vw;
+
+    top: 36vw;
+    right: 4vw;
+}
+
+#photo-2 {
+    background-image: url('/assets/img/all_ones_campaign/all_ones_campaign_03_700.jpg');
+    background-size: cover;
+    background-position: 77% 50%;
+
+    height: 27vw;
+    width: 27vw;
+
+    top: 108vw;
+    left: 6vw;
+}
+
+#photo-3 {
+    background-image: url('/assets/img/all_ones_campaign/all_ones_campaign_04_700.jpg');
+    background-size: cover;
+    background-position: 56% 50%;
+
+    height: 30vw;
+    width: 30vw;
+
+    top: 128vw;
+    right: 9vw;
+}
+
+#photo-4 {
+    background-image: url('/assets/img/all_ones_campaign/all_ones_campaign_05_700.jpg');
+    background-size: cover;
+    background-position: 0% 50%;
+
+    height: 27vw;
+    width: 27vw;
+
+    top: 203vw;
+    left: 1vw;
 }
 
 /* GENERIC BUBBLE STYLING */
@@ -18,7 +147,7 @@
     position: absolute;
     border-radius: 50%;
 
-    background-color: #F6416C;
+    background-color: #B83B5E;
 
     display: grid;
     place-content: center;
@@ -30,7 +159,7 @@
     border-radius: 50%;
 
     background-color: #F8F3D4;
-    border: .2rem solid #fff;
+    border: .2rem solid #F9F7F7;
 
     box-shadow: 0 0 .3rem .3rem rgba(0, 0, 0, .2) inset;
 
@@ -98,7 +227,7 @@
     right: -5vw;
     top: 56vw;
 
-    font-size: .7rem;
+    font-size: .5rem;
 }
 
 #autumn-2023-campaign .campaign-point {
@@ -126,7 +255,7 @@
 }
 
 #campaign-contact-button {
-    background-color: #00b8a9;
+    background-color: #6A2C70;
     padding: .2rem .3rem;
     margin-top: .3rem;
 
@@ -156,26 +285,50 @@
         height: 299vw;
     }
 
+    #photo-1 {
+        top: 29vw;
+        right: 2vw;
+    }
+
+    #photo-2 {
+        top: 110vw;
+        left: 2vw;
+    }
+
+    #photo-3 {
+        height: 35vw;
+        width: 35vw;
+        top: 126vw;
+        right: 4vw;
+    }
+
+    #photo-4 {
+        height: 23vw;
+        width: 23vw;
+        top: 202vw;
+        left: 2vw;
+    }
+
     #campaign-title {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
     
     #campaign-description {
-        font-size: .9rem;
+        font-size: 1.05rem;
     }
 
     #autumn-2023-campaign .campaign-point {
         font-size: .95rem;
     }
-
-    #campaign-contact-button {
-        padding: .4rem .7rem;
-        margin-top: .5rem;
-    }
     
     #autumn-2023-campaign .call-to-action-text-container {
-        margin-top: .8rem;
-        font-size: .7rem;
+        font-size: .9rem;
+        margin-top: .2rem;
+    }
+
+    #campaign-contact-button {
+        font-size: .8rem;
+        padding: .2rem .5rem;
     }
 }
 
@@ -184,12 +337,40 @@
         height: 287vw;
     }
 
+    #photo-1 {
+        height: 38vw;
+        width: 38vw;
+        top: 32vw;
+        right: 2vw;
+    }
+
+    #photo-2 {
+        height: 27vw;
+        width: 27vw;
+        top: 108vw;
+        left: 4vw;
+    }
+
+    #photo-3 {
+        height: 35vw;
+        width: 35vw;
+        top: 124vw;
+        right: 4vw;
+    }
+
+    #photo-4 {
+        height: 23vw;
+        width: 23vw;
+        top: 202vw;
+        left: 2vw;
+    }
+
     #campaign-title {
         font-size: 1.8rem;
     }
     
     #campaign-description {
-        font-size: 1rem;
+        font-size: 1.05rem;
     }
 
     #autumn-2023-campaign .campaign-point {
@@ -202,14 +383,46 @@
     }
     
     #autumn-2023-campaign .call-to-action-text-container {
-        margin-top: .8rem;
-        font-size: .8rem;
+        margin-top: .1rem;
+        font-size: 1rem;
+    }
+
+    #campaign-clarification {
+        font-size: .69rem;
     }
 }
 
 @media (min-width: 450px) {
     #campaign-title {
         font-size: 2rem;
+    }
+
+    #photo-1 {
+        height: 38vw;
+        width: 38vw;
+        top: 34vw;
+        right: 2vw;
+    }
+
+    #photo-2 {
+        height: 27vw;
+        width: 27vw;
+        top: 109vw;
+        left: 4vw;
+    }
+
+    #photo-3 {
+        height: 37vw;
+        width: 37vw;
+        top: 123vw;
+        right: 3vw;
+    }
+
+    #photo-4 {
+        height: 23vw;
+        width: 23vw;
+        top: 204vw;
+        left: 2vw;
     }
     
     #campaign-description {
@@ -221,17 +434,50 @@
     }
 
     #campaign-clarification {
-        font-size: .8rem;
+        font-size: .79rem;
     }
     
     #autumn-2023-campaign .call-to-action-text-container {
-        font-size: .9rem;
+        font-size: 1.1rem;
+    }
+
+    #campaign-contact-button {
+        font-size: 1rem;
+        padding: .4rem .7rem;
     }
 }
 
 @media (min-width: 500px) {
     #campaign-title {
         font-size: 2.2rem;
+    }
+
+    #photo-1 {
+        height: 38vw;
+        width: 38vw;
+        top: 34vw;
+        right: 2vw;
+    }
+
+    #photo-2 {
+        height: 27vw;
+        width: 27vw;
+        top: 108vw;
+        left: 4vw;
+    }
+
+    #photo-3 {
+        height: 37vw;
+        width: 37vw;
+        top: 123vw;
+        right: 3vw;
+    }
+
+    #photo-4 {
+        height: 23vw;
+        width: 23vw;
+        top: 204vw;
+        left: 2vw;
     }
     
     #campaign-description {
@@ -243,12 +489,16 @@
     }
 
     #campaign-clarification {
-        font-size: .9rem;
+        font-size: .88rem;
     }
 
     #autumn-2023-campaign .call-to-action-text-container {
-        font-size: 1rem;
-        margin-top: .9rem;
+        font-size: 1.2rem;
+        margin-top: 0;
+    }
+
+    #campaign-contact-button {
+        font-size: 1.1rem;
     }
 }
 
@@ -266,8 +516,11 @@
     }
 
     #autumn-2023-campaign .call-to-action-text-container {
-        font-size: 1.1rem;
-        margin-top: 1rem;
+        font-size: 1.3rem;
+    }
+
+    #campaign-contact-button {
+        font-size: 1.2rem;
     }
 }
 
@@ -296,25 +549,11 @@
     }
 
     #campaign-call-to-action .call-to-action-text-container {
-        font-size: 1.25rem;
-    }
-}
-
-@media (min-width: 650px) {
-    #campaign-title {
-        font-size: 2.7rem;
+        font-size: 1.4rem;
     }
 
-    #campaign-description {
-        font-size: 1.6rem;
-    }
-
-    #autumn-2023-campaign .campaign-point {
-        font-size: 1.8rem;
-    }
-
-    #campaign-call-to-action .call-to-action-text-container {
-        font-size: 1.35rem;
+    #campaign-contact-button {
+        font-size: 1.4rem;
     }
 }
 
@@ -323,8 +562,36 @@
         font-size: 3rem;
     }
 
+    #photo-1 {
+        height: 36vw;
+        width: 36vw;
+        top: 32vw;
+        right: 2vw;
+    }
+
+    #photo-2 {
+        height: 27vw;
+        width: 27vw;
+        top: 109vw;
+        left: 4vw;
+    }
+
+    #photo-3 {
+        height: 37vw;
+        width: 37vw;
+        top: 123vw;
+        right: 3vw;
+    }
+
+    #photo-4 {
+        height: 23vw;
+        width: 23vw;
+        top: 205vw;
+        left: 2vw;
+    }
+
     #campaign-description {
-        font-size: 1.8rem;
+        font-size: 1.85rem;
     }
 
     #autumn-2023-campaign .campaign-point {
@@ -333,6 +600,44 @@
 
     #campaign-call-to-action .call-to-action-text-container {
         font-size: 1.45rem;
+    }
+}
+
+@media (min-width: 700px) {
+    #photo-1 {
+        height: 37vw;
+        width: 37vw;
+        top: 34vw;
+        right: 2vw;
+    }
+
+    #photo-2 {
+        height: 27vw;
+        width: 27vw;
+        top: 110vw;
+        left: 1vw;
+    }
+
+    #photo-3 {
+        height: 37vw;
+        width: 37vw;
+        top: 123vw;
+        right: 3vw;
+    }
+
+    #photo-4 {
+        height: 23vw;
+        width: 23vw;
+        top: 204vw;
+        left: 2vw;
+    }
+
+    #campaign-call-to-action .call-to-action-text-container {
+        font-size: 1.75rem;
+    }
+
+    #campaign-contact-button {
+        font-size: 1.6rem;
     }
 }
 
@@ -379,6 +684,77 @@
         width: 55vw;
     }
 
+    #autumn-2023-campaign .background-bubbles .big-bubble {
+        width: 150vw;
+        height: 150vw;
+    }
+
+    #photo-1 {
+        height: 24vw;
+        width: 24vw;
+        top: 2vw;
+        right: 7vw;
+    }
+
+    #photo-2 {
+        height: 27vw;
+        width: 27vw;
+        top: 67vw;
+        left: -4vw;
+    }
+
+    #photo-3 {
+        height: 25vw;
+        width: 25vw;
+        top: 98vw;
+        right: -7vw;
+    }
+
+    #photo-4 {
+        height: 23vw;
+        width: 23vw;
+        top: 122vw;
+        left: -6vw;
+    }
+
+    #big-bubble-1 {
+        top: min(2vw, 24px);
+        right: min(-30vw, -360px);
+    }
+
+    #big-bubble-2 {
+        top: min(16vw, 192px);
+        right: min(-25vw, -300px);
+        left: auto;
+    }
+
+    #background-bubble-1 {
+        right: min(12vw, 144px);
+        top: min(7vw, 84px);
+    }
+
+    #background-bubble-2 {
+        right: min(3vw, 36px);
+        left: min(7vw, 84px);
+        top: min(60vw, 720px);
+    }
+
+    #background-bubble-3 {
+        left: auto;
+        right: min(2vw, 24px);
+        top: min(53vw, 636px);
+    }
+
+    #background-bubble-4 {
+        top: min(110vw, 1320px);
+        right: min(11vw, 132px);
+    }
+
+    #background-bubble-5 {
+        top: min(107vw, 1284px);
+        left: min(2vw, 24px);
+    }
+
     #campaign-description {
         top: 13vw;
         font-size: 1.5rem;
@@ -421,8 +797,12 @@
     }
 
     #campaign-call-to-action .call-to-action-text-container {
-        font-size: 1.6rem;
+        font-size: 2.1rem;
         margin-top: 2rem;
+    }
+
+    #campaign-contact-button {
+        padding: .6rem .9rem;
     }
 
     #campaign-clarification {
@@ -444,14 +824,120 @@
     }
 
     #campaign-call-to-action .call-to-action-text-container {
+        font-size: 2rem;
+    }
+
+    #campaign-contact-button {
         font-size: 1.7rem;
+    }
+}
+
+@media (min-width: 850px) {
+    #photo-1 {
+        height: 24vw;
+        width: 24vw;
+        top: 2vw;
+        right: 7vw;
+    }
+
+    #photo-2 {
+        height: 27vw;
+        width: 27vw;
+        top: 67vw;
+        left: -4vw;
+    }
+
+    #photo-3 {
+        height: 25vw;
+        width: 25vw;
+        top: 99vw;
+        right: -4vw;
+    }
+
+    #photo-4 {
+        height: 23vw;
+        width: 23vw;
+        top: 119vw;
+        left: -4vw;
+    }
+
+    #autumn-2023-campaign .campaign-point {
+        font-size: 1.7rem;
+    }
+
+    #campaign-call-to-action .call-to-action-text-container {
+        font-size: 2rem;
+    }
+
+    #campaign-contact-button {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 900px) {
+    #campaign-title {
+        font-size: 2.5rem;
+    }
+
+    #campaign-description {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 950px) {
+    #photo-1 {
+        height: 24vw;
+        width: 24vw;
+        top: 2vw;
+        right: 7vw;
+    }
+
+    #photo-2 {
+        height: 27vw;
+        width: 27vw;
+        top: 67vw;
+        left: -4vw;
+    }
+
+    #photo-3 {
+        height: 25vw;
+        width: 25vw;
+        top: 98vw;
+        right: -6vw;
+    }
+
+    #photo-4 {
+        height: 23vw;
+        width: 23vw;
+        top: 121vw;
+        left: -4vw;
+    }
+
+    #campaign-title {
+        font-size: 2.7rem;
+    }
+
+    #campaign-description {
+        font-size: 1.9rem;
+    }
+
+    #autumn-2023-campaign .campaign-point {
+        font-size: 1.9rem;
+    }
+
+    #campaign-call-to-action .call-to-action-text-container {
+        font-size: 2.5rem;
+    }
+
+    #campaign-contact-button {
+        font-size: 2rem;
     }
 }
 
 /* LAYOUT 4 */
 @media (min-width: 992px) {
     #autumn-2023-campaign {
-        height: min(163vw, 1956px);
+        height: min(180vw, 2150px);
     }
 
     /* SM BUBBLE */
@@ -485,6 +971,69 @@
     #autumn-2023-campaign .bubble-md-lg-inner {
         height: min(50vw, 600px);
         width: min(50vw, 600px);
+    }
+
+    #autumn-2023-campaign .background-bubbles .big-bubble {
+        width: min(95vw, 1140px);
+        height: min(95vw, 1140px);
+    }
+
+    #big-bubble-1 {
+        right: min(1vw, 60px);
+    }
+
+    #big-bubble-2 {
+        left: min(1vw, 60px);
+        top: min(66vw, 792px);
+    }
+
+    #background-bubble-3 {
+        top: min(38vw, 456px);
+        right: min(3vw, 36px);
+    }
+
+    #background-bubble-4 {
+        top: min(97vw, 1164px);
+        right: min(19vw, 228px);
+    }
+
+    #autumn-2023-campaign .background-bubbles .bubble-md {
+        width: min(60vw, 720px);
+        height: min(60vw, 720px);
+    }
+
+    #autumn-2023-campaign .background-bubbles .bubble-sm {
+        width: min(30vw, 360px);
+        height: min(30vw, 360px);
+    }
+
+    #photo-1 {
+        height: min(24vw, calc(24*12px));
+        width: min(24vw, calc(24*12px));
+        top: min(2vw, calc(2*12px));
+        right: min(7vw, calc(7*12px));
+
+    }
+
+    #photo-2 {
+        height: min(22vw, calc(22*12px));
+        width: min(22vw, calc(22*12px));
+        top: min(80vw, calc(80*12px));
+        left: min(1vw, calc(1*12px));
+    }
+
+    #photo-3 {
+        height: min(26vw, calc(26*12px));
+        width: min(26vw, calc(26*12px));
+        top: min(94vw, calc(94*12px));
+        right: min(1vw, calc(1*12px));
+    }
+
+    #photo-4 {
+        height: min(23vw, calc(23*12px));
+        width: min(23vw, calc(23*12px));
+        top: min(140vw, calc(140*12px));
+        left: min(15vw, calc(15*12px));
     }
 
     #campaign-title {
@@ -537,7 +1086,12 @@
     }
 
     #autumn-2023-campaign .call-to-action-text-container {
-        font-size: 1.9rem;
+        font-size: 2.3rem;
+        margin-top: .5rem;
+    }
+
+    #campaign-contact-button {
+        padding: .7rem 1.5rem;
     }
 }
 
@@ -555,7 +1109,21 @@
     }
 
     #campaign-call-to-action .call-to-action-text-container {
-        margin-top: 2rem;
+        margin-top: .5rem;
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 1100px) {
+    #campaign-title {
+        font-size: 2.8rem;
+    }
+
+    #campaign-description {
         font-size: 2.1rem;
+    }
+
+    #autumn-2023-campaign .campaign-point {
+        font-size: 2.3rem;
     }
 }
