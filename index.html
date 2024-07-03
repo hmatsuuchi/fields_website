@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149376868-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
 
-        gtag('config', 'UA-149376868-1');
-    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-PVQSNGB');</script>
+    <!-- End Google Tag Manager -->
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
@@ -17,8 +16,7 @@
     <title>フィールズ英会話・徳島市</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/styles.css?ver=039">
-    <link rel="stylesheet" href="assets/css/spooky_science.css?ver=004">
+    <link rel="stylesheet" href="assets/css/styles.css?ver=041">
     <link rel="stylesheet" href="assets/css/autumn_2023_campaign.css?ver=008">
 
     <meta name="description" content="フィールズには、1才から大人まで、生徒のみなさんが楽しみながら英語を学べるコースがあります。個性豊かな講師による楽しいレッスンを体験してみませんか。">
@@ -54,6 +52,11 @@
 </head>
 
 <body>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PVQSNGB"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <!-- NAVIGATION -->
     <nav id="navigation">
@@ -96,42 +99,6 @@
 
     <!-- LATEST INFORMATION -->
     <section id="latest">
-        <div id="spooky-science">
-            <div id="poster"></div>
-                <div id="text-container">
-                    <div id="background-image"></div>
-                    <div class="title">スプーキー&#x200a;サイエンス</div>
-                    <div class="date">2023年10月22日(日)</div>
-                    <div class="session-container">
-                        <div>朝 10:00 ~ 11:30</div>
-                        <div>昼 13:00 ~ 14:30</div>
-                        <div>夜 16:00 ~ 17:30</div>
-                    </div>
-                    <div class="data-container">
-                        <div class="left-data">
-                            <div>定員:</div>
-                            <div>参加費:</div>
-                            <div>対象:</div>
-                            <div>申込締切:</div>
-                        </div>
-                        <div class="right-data">
-                            <div>先着 各20名</div>
-                            <div>500円 当日現金支払い</div>
-                            <div>年長 ~ 小６</div>
-                            <div>10月21日 (土)</div>
-                        </div>
-                    </div>
-                    <div class="description">
-                        フィールズ英会話からハロウィンイベントへのお誘いです！ハロウィンをテーマにしたサイエンス実験の数々を楽しめる特別なイベントを開催します。カラフルな化学反応や不思議なデモンストレーションを体験しながら、楽しく学ぶことができます。一緒にワクワクする時間を共有しましょう。詳細はお楽しみに！
-                    </div>
-                    <div class="contact-container">
-                        <div class="call-to-action">お申込はフィールズまで</div>
-                        <a class="phone" href="tel:0886613464">088-661-3464</a>
-                        <a class="email" href="mailto:info@fields.jp?subject=お問い合わせ">info@fields.jp</a>
-                        <a class="spooky-link" href="#contact-form-container">ネットでお問い合わせ</a>
-                </div>
-            </div>
-        </div>
        <div id="autumn-2023-campaign">
             <div class="background-bubbles">
                 <div id="big-bubble-1" class="big-bubble"></div>
@@ -167,7 +134,7 @@
                 <div class="bubble-inner bubble-md-inner">
                     <div class="call-to-action-text-container">
                         詳細はフィールズまで<br>
-                        <a href="tel:0886613464">088-661-3464</a>
+                        <a onclick="return gtag_report_conversion('tel:0886613464');" href="tel:0886613464">088-661-3464</a>
                         <a href="mailto:info@fields.jp?subject=お問い合わせ">info@fields.jp</a>
                         <a id="campaign-contact-button" href="#contact-form-container">ネットでお問い合わせ</a>
                     </div>
@@ -639,6 +606,59 @@
                         <div class="stat-subtitle">レッスン料</div>
                     </div>
                     <div class="stat-description">月々の授業料と設備の使用は9,900円です。生徒さんと保護者の方は開校時間帯いつでもスクールへお立ち寄りいただき、ロビーで自習をしたり講師とコミュニケーションをとる場としてぜひご活用ください。</div>
+                </div>
+                <div class="signup-button-container">
+                    <a class="signup-button" href="#contact">無料体験レッスン<br>ご予約</a>
+                </div>
+            </div>
+            <!-- HYBRID SERVICE -->
+            <div class="service-tab" onclick="serviceExpand('hybrid')">
+                <div class="tab-image-container" id="hybrid-tab"></div>
+                <h3>ハイブリッド</h3>
+                <h4>hybrid</h4>
+                <div class="learn-more-button" id="hybrid-button">詳しくはこちら</div>
+                <div class="learn-more-button button-close" id="hybrid-button-close"><div class="exit-icon-container">
+                    <div class="exit exit-1"></div>
+                    <div class="exit exit-2"></div>
+                </div>
+            </div>
+            </div>
+            <div class="service-description unloaded" id="hybrid-description">
+                <div class="service-header-container">
+                    <div class="service-header-title">ハイブリッド (文法・会話)</div>
+                    <div class="service-header-subtitle">hybrid</div>
+                </div>
+                <div class="stat-container">
+                    <div class="stat-header">
+                        <div class="stat-title">50分</div>
+                        <div class="stat-subtitle">レッスンの時間</div>
+                    </div>
+                    <div class="stat-description">ハイブリッドコースは、会話と文法の要素を組み合わせたコースです。このコースでは、生徒が文法とスピーキングのスキルを同時に伸ばしていけることを目標としています。学校の授業で学ぶ内容に沿った文法ポイントを英会話に取り入れることにより、文法の理解を深め、ターゲットの文法を実際の会話で活かせるよう構成しています。</div>
+                    <div class="stat-header">
+                        <div class="stat-title">46回</div>
+                        <div class="stat-subtitle">年間レッスン回数</div>
+                    </div>
+                    <div class="stat-description">年間46回のレッスンです。悪天候や講師の都合等の理由で休講する際には、レッスンの振替をさせていただきます。</div>
+                    <div class="stat-header">
+                        <div class="stat-title">6人</div>
+                        <div class="stat-subtitle">クラス定員</div>
+                    </div>
+                    <div class="stat-description">クラス定員は最大6名です。少人数クラスのため、それぞれの長所・短所に気を配った適切なアドバイスをすることができ、生徒ひとりひとりに合わせたきめ細かい指導が可能です。</div>
+                    <div class="stat-header">
+                        <div class="stat-title">~ ¥5,000</div>
+                        <div class="stat-subtitle">教材費</div>
+                    </div>
+                    <div class="stat-description">生徒に合わせて講師が使用する教材を決定します。</div>
+                    <div class="stat-header">
+                        <div class="stat-title entrance-fee">20,000円</div>
+                        <div class="stat-subtitle">入会金</div>
+                    </div>
+                    <div class="stat-description">20,00円でご入会いただけます。</div>
+                    <div class="stat-header">
+                        <div class="stat-title">¥7,900 ~ ¥9,900</div>
+                        <div class="stat-subtitle">レッスン料</div>
+                    </div>
+                    <div class="stat-description">月々の授業料と設備費は7,900 ~ 9,900円です。開校時間帯は、スクールのロビーを自習や講師とコミュニケーションをとる場としてご利用いただけます。</div>
                 </div>
                 <div class="signup-button-container">
                     <a class="signup-button" href="#contact">無料体験レッスン<br>ご予約</a>
@@ -1215,7 +1235,7 @@
             <div class="contact-card-container">
                 <div class="contact-card">
                     <div class="contact-info-title">フィールズ英会話</div>
-                    <div class="contact-info"><a href="tel:0886613464">088-661-3464</a></div>
+                    <div class="contact-info"><a onclick="return gtag_report_conversion('tel:0886613464');" href="tel:0886613464">088-661-3464</a></div>
                     <div class="contact-info"><a href="mailto:info@fields.jp?subject=お問い合わせ">info@fields.jp</a></div>
                     <div class="contact-info">月 ~ 金　13:00 ~ 22:00</div>
                     <div class="contact-info">土　10:00 ~ 19:00</div>
@@ -1247,7 +1267,7 @@
     <section id="footer">
         <div class="footer-container">
             <div class="footer-info">
-                <a href="tel:0886613464" class="inverted-text">088-661-3464</a><br>
+                <a onclick="return gtag_report_conversion('tel:0886613464');" href="tel:0886613464" class="inverted-text">088-661-3464</a><br>
                 <a href="mailto:info@fields.jp?subject=お問い合わせ" class="inverted-text">info@fields.jp</a><br>
                 〒770-8053 徳島県徳島市沖浜東3-2<br>
                 オプスフジタ 2階 I号室<br>
@@ -1261,7 +1281,7 @@
                 <a id="link-2" class="link" href="https://www.facebook.com/fieldstokushima/" alt="link to facebook"></a>
                 <a id="link-3" class="link" href="https://www.instagram.com/fields_english/" alt="link to instagram"></a>
                 <a id="link-4" class="link" href="mailto:info@fields.jp?subject=お問い合わせ" alt="link to email"></a>
-                <a id="link-5" class="link" href="tel:0886613464" alt="link to call"></a>
+                <a onclick="return gtag_report_conversion('tel:0886613464');" id="link-5" class="link" href="tel:0886613464" alt="link to call"></a>
             </div>
             <div class="copyright">Copyright © Fields 2021. All rights reserved.</div>
         </div>

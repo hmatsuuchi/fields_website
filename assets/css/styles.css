@@ -884,6 +884,10 @@ a {
     background-image: url('../img/services/highschool_icon.svg');
 }
 
+#hybrid-tab {
+    background-image: url('../img/services/hybrid_icon.svg');
+}
+
 #private-tab {
     background-image: url('../img/services/private_icon.svg');
 }
@@ -1160,6 +1164,12 @@ h6 {
     background-image: url('../img/services/highschool_icon_background_darker.svg');
     background-size: auto 110%;
     background-position: 50% 50%;
+}
+
+#hybrid-description {
+    background-image: url('../img/services/hybrid_icon_background_lighter.svg');
+    background-size: auto 110%;
+    background-position: 35% 10%;
 }
 
 #private-description {

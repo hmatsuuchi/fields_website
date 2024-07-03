@@ -53,6 +53,10 @@
     background-image: url('../img/services/highschool_icon.svg');
 }
 
+#hybrid-tab {
+    background-image: url('../img/services/hybrid_icon.svg');   
+}
+
 #private-tab {
     background-image: url('../img/services/private_icon.svg');
 }
