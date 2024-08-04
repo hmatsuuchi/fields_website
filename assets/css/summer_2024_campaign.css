@@ -223,6 +223,12 @@
     box-shadow: 0.25rem 0.25rem 0.5rem 0.25rem rgba(0, 0, 0, 0.2);
 }
 
+@supports (-webkit-backdrop-filter: none) {
+    #summer-2024-campaign .polaroid-small {
+        border-bottom: none;
+    }
+}
+
 /* ------- Photo 4 ------- */
 
 #summer-2024-campaign .photo-4 {
@@ -497,6 +503,52 @@
         margin: 0 min(3.5vw, 2.5rem) 0 min(3.5vw, 2.5rem);
 
         padding: 0;
+    }
+
+    #summer-2024-campaign .photo-4 {
+        width: min(13vw, 7.5rem);
+
+        border: solid 0.5rem #fff;
+    
+        margin: -6rem 0 0 -1.5rem;
+    }
+
+    @supports (-webkit-backdrop-filter: none) {
+        #summer-2024-campaign .photo-4 {
+            border-bottom: none;
+        }
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #summer-2024-campaign .photo-4 {
+        width: min(16vw, 10rem);
+    
+        margin: -9rem 0 0 -1.5rem;
+    }
+}
+
+@media screen and (min-width: 1050px) {
+    #summer-2024-campaign .photo-4 {
+        width: min(15.5vw, 10rem);
+    
+        margin: -9rem 0 0 -1.5rem;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    #summer-2024-campaign .photo-4 {
+        width: min(16vw, 10rem);
+    
+        margin: -9rem 0 0 -1.5rem;
+    }
+}
+
+@media screen and (min-width: 1150px) {
+    #summer-2024-campaign .photo-4 {
+        width: min(15vw, 11rem);
+    
+        margin: -9.75rem 0 0 -1.5rem;
     }
 }
 
