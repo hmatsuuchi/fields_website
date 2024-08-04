@@ -1,0 +1,507 @@
+#summer-2024-campaign {
+    display: grid;
+}
+
+/* ======= PHOTO CONTAINER ======= */
+
+#summer-2024-campaign .outer-photo-overflow-container {
+    position: absolute;
+
+    overflow: hidden;
+
+    top: 0;
+    right: 0;
+
+    width: 100vw;
+    height: 100vh;
+}
+#summer-2024-campaign .inner-photo-overflow-container {
+    position: relative;
+
+    top: 0;
+    right: 0;
+
+    width: 100%;
+    max-width: 1200px;
+    height: 30vh;
+
+    margin: 0 auto;
+}
+
+#summer-2024-campaign .polaroid {
+    position: absolute;
+
+    border-top: solid min(3vw, calc(1200px * 0.03)) #fff;
+    border-right: solid min(3vw, calc(1200px * 0.03)) #fff;
+    border-bottom: solid min(9vw, calc(1200px * 0.09)) #fff;
+    border-left: solid min(3vw, calc(1200px * 0.03)) #fff;
+
+    aspect-ratio: 1 / 1;
+
+    background-color: #fff;
+    background-repeat: no-repeat;
+
+    box-shadow: 0.25rem 0.25rem 0.5rem 0.25rem rgba(0, 0, 0, 0.2);
+}
+
+@supports (-webkit-backdrop-filter: none) {
+    #summer-2024-campaign .polaroid {
+        border-bottom: solid min(3vw, calc(1200px * 0.03)) #fff;
+    }
+}
+
+#summer-2024-campaign .photo {
+    aspect-ratio: 1 / 1;
+
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+
+    background-size: cover;
+}
+
+/* ------- Photo 1 ------- */
+
+#summer-2024-campaign .photo-1 {
+    z-index: 3;
+
+    width: 35vw;
+    max-width: calc(1200px * 0.35);
+
+    top: min(3vw, calc(1200px * 0.03));
+    left: max(-3vw, calc(-1200px * 0.03));
+
+    transform: rotate(-5deg);
+}
+
+#summer-2024-campaign .photo-1 .photo {
+    width: 35vw;
+    max-width: calc(1200px * 0.35);
+
+    background-image: url("/assets/img/hero/photos/05.jpg");
+    background-position: 0% 50%;
+}
+
+/* ------- Photo 2 ------- */
+
+#summer-2024-campaign .photo-2 {
+    z-index: 2;
+
+    width: 35vw;
+    max-width: calc(1200px * 0.35);
+
+    top: min(2vw, calc(1200px * 0.02));
+    left: min(calc((100vw - min(35vw, 1200px * 0.35) - min(3vw, calc(1200px * 0.03))) / 2), calc((1200px - min(35vw, 1200px * 0.35) - min(3vw, calc(1200px * 0.03))) / 2));
+
+    transform: rotate(1deg);
+}
+
+#summer-2024-campaign .photo-2 .photo {
+    width: 35vw;
+    max-width: calc(1200px * 0.35);
+
+    background-image: url("/assets/img/hero/photos/04.jpg");
+    background-position: 100% 50%;
+}
+
+/* ------- Photo 3 ------- */
+
+#summer-2024-campaign .photo-3 {
+    z-index: 1;
+
+    width: 35vw;
+    max-width: calc(1200px * 0.35);
+
+    top: min(3vw, calc(1200px * 0.03));
+    right: max(-3vw, calc(-1200px * 0.03));
+
+    transform: rotate(5deg);
+}
+
+#summer-2024-campaign .photo-3 .photo {
+    width: 35vw;
+    max-width: calc(1200px * 0.35);
+
+    background-image: url("/assets/img/hero/photos/02.jpg");
+    background-position: 0% 50%;
+}
+
+/* ======= SEA CONTAINER ======= */
+
+#summer-2024-campaign .sea-container {
+    background-color: #03AED2;
+
+    max-height: 1000px;
+
+    display: grid;
+}
+
+#summer-2024-campaign .main-text-container {
+    margin-top: min(53vw, 650px);
+    margin-bottom: 10vw;
+
+    place-self: center;
+
+    text-align: center;
+}
+
+#summer-2024-campaign h2 {
+    color: #FDDE55;
+
+    padding: 0;
+    margin-bottom: min(5vw, 1.75rem);
+
+    font-family: "Rampart One", sans-serif;
+    font-size: min(11.5vw, 6rem);
+    font-weight: 900;
+}
+
+#summer-2024-campaign h3 {
+    color: #FDDE55;
+
+    font-size: min(4.5vw, 2.25rem);
+}
+
+/* ======= SAND CONTAINER ======= */
+
+#summer-2024-campaign .sand-container {
+    justify-self: center;
+
+    width: 100vw;
+
+    overflow: hidden;
+
+    padding: 2rem 0;
+
+    display: grid;
+    grid-auto-flow: row;
+    grid-row-gap: 2rem;
+    justify-items: center;
+}
+
+#summer-2024-campaign .sand-point-container {
+    width: calc(100vw - 2rem - 0.5rem);
+    max-width: calc(400px - 2rem - 0.5rem);
+    aspect-ratio: 1 / 1;
+
+    border-radius: 50%;
+
+    box-shadow: 0.25rem 0.25rem 0.5rem 0.25rem rgba(0, 0, 0, 0.2);
+
+    border: solid 0.25rem #fff;
+
+    background-color: #68D2E8;
+
+    color: rgb(50, 50, 50);
+
+    display: grid;
+    place-content: center;
+}
+
+#summer-2024-campaign h4 {
+    margin-bottom: .5rem;
+
+    font-size: min(8vw, 2.25rem);
+    text-align: center;
+}
+
+#summer-2024-campaign p {
+    padding: 0 2rem 1.5rem 2rem;
+
+    font-size: min(5vw, 1.3rem);
+    text-align: center;
+}
+
+#summer-2024-campaign .polaroid-small {
+    position: absolute;
+
+    border: solid min(2vw, calc(1200px * 0.02)) #fff;
+
+    aspect-ratio: 1 / 1;
+
+    background-color: #fff;
+    background-repeat: no-repeat;
+
+    box-shadow: 0.25rem 0.25rem 0.5rem 0.25rem rgba(0, 0, 0, 0.2);
+}
+
+/* ------- Photo 4 ------- */
+
+#summer-2024-campaign .photo-4 {
+    width: 26vw;
+
+    margin: -2.5rem 0 0 -1.5rem;
+
+    transform: rotate(-10deg);
+
+    z-index: 1;
+}
+
+#summer-2024-campaign .photo-4 .photo {
+    aspect-ratio: 1 / 1;
+
+    background-image: url("/assets/img/hero/photos/11.JPG");
+    background-position: 35% 50%;
+}
+
+@media screen and (min-width: 400px) {
+    #sand-point-container-01 {
+        justify-self: left;
+
+        margin: 0 0 0 -30px;
+    }
+
+    #sand-point-container-02 {
+        justify-self: right;
+
+        margin: min(-100px, -25vw) -30px 0 0;
+    }
+
+    #sand-point-container-03 {
+        justify-self: left;
+
+        margin: min(-100px, -25vw) 0 0 -30px;
+    }
+
+    #summer-2024-campaign .photo-4 {
+        width: min(26vw, 6.5rem);
+    
+        margin: -3.5rem 0 0 1.5rem;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    #sand-point-container-01 {
+        margin: 0 0 0 -20px;
+    }
+
+    #sand-point-container-02 {
+        margin: min(-100px, -27vw) -20px 0 0;
+    }
+
+    #sand-point-container-03 {
+        margin: min(-100px, -27vw) 0 0 -20px;
+    }
+
+    #summer-2024-campaign .photo-4 {
+        width: min(22vw, 6.75rem);
+    
+        margin: -4.2rem 0 0 1rem;
+    }
+}
+
+@media screen and (min-width: 550px) {
+    #sand-point-container-01 {
+        margin: 0 0 0 -10px;
+    }
+
+    #sand-point-container-02 {
+        margin: min(-100px, -28vw) -10px 0 0;
+    }
+
+    #sand-point-container-03 {
+        margin: min(-100px, -28vw) 0 0 -10px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    #summer-2024-campaign .sand-container {
+        grid-row-gap: 0;
+    }
+
+    #summer-2024-campaign .sand-point-container {
+        width: calc(50vw + 40px);
+        max-width: none;
+
+        align-content: start;
+    }
+
+    #sand-point-container-01 {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: left;
+
+        margin: 0 0 0 -25px;
+    }
+
+    #sand-point-container-02 {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: right;
+
+        margin: 0 -25px 0 0;
+    }
+
+    #sand-point-container-03 {
+        justify-self: center;
+
+        margin: -110px 0 0 0;
+    }
+
+    #summer-2024-campaign .sand-point-container h4 {
+        margin-top: 10vw;
+
+        font-size: min(8vw, 1.9rem);
+    }
+
+    #summer-2024-campaign .sand-point-container p {
+        font-size: min(5vw, 1.1rem);
+
+        margin: 0 1.5rem 1rem 1.5rem;
+    }
+
+    #summer-2024-campaign #sand-point-container-03 h4 {
+        margin-top: 8vw;
+    }
+
+    #summer-2024-campaign .photo-4 {
+        width: min(22vw, 6.75rem);
+    
+        margin: -5rem 0 0 1rem;
+    }
+}
+
+@media screen and (min-width: 650px) {
+    #summer-2024-campaign .sand-point-container h4 {
+        font-size: min(8vw, 2rem);
+    }
+
+    #summer-2024-campaign .sand-point-container p {
+        font-size: min(5vw, 1.2rem);
+
+        margin: 0 1rem 0 1rem;
+    }
+
+    #summer-2024-campaign #sand-point-container-01 p, #summer-2024-campaign #sand-point-container-02 p {
+        margin-bottom: 3rem;
+    }
+
+    #summer-2024-campaign #sand-point-container-01 p {
+        margin: 0 1.5rem;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    #summer-2024-campaign .sand-point-container {
+        width: calc(50vw + 50px);
+    }
+
+    #summer-2024-campaign #sand-point-container-01 p {
+        margin-right: 2.5rem;
+    }
+
+    #summer-2024-campaign .sand-point-container h4 {
+        font-size: min(8vw, 2.5rem);
+    }
+
+    #summer-2024-campaign .sand-point-container p {
+        font-size: min(8vw, 1.35rem);
+    }
+
+    #summer-2024-campaign .photo-4 {
+        width: min(18vw, 10.75rem);
+    
+        margin: -5.5rem 0 0 1rem;
+    }
+}
+
+@media screen and (min-width: 750px) {
+    #summer-2024-campaign .sand-point-container {
+        width: calc(50vw + 60px);
+    }
+
+    #summer-2024-campaign #sand-point-container-01 p {
+        margin-right: 4rem;
+    }
+
+    #summer-2024-campaign .sand-point-container p {
+        font-size: min(8vw, 1.5rem);
+    }
+}
+
+@media screen and (min-width: 800px) {
+    #summer-2024-campaign .sand-point-container {
+        width: calc(50vw + 70px);
+    }
+
+    #summer-2024-campaign #sand-point-container-01 p {
+        margin-right: 5rem;
+    }
+
+    #summer-2024-campaign .sand-point-container p {
+        font-size: min(8vw, 1.6rem);
+    }
+
+    #summer-2024-campaign .photo-4 {
+        width: min(18vw, 10rem);
+    
+        margin: -6rem 0 0 1rem;
+    }
+}
+
+@media screen and (min-width: 850px) {
+    #summer-2024-campaign .sand-point-container p {
+        font-size: min(8vw, 1.7rem);
+    }
+}
+
+@media screen and (min-width: 900px) {
+    #summer-2024-campaign .sand-container {
+        grid-template-columns: repeat(3, 1fr);
+
+        overflow: visible;
+        
+        width: calc(100% - 1rem);
+    }
+
+    #summer-2024-campaign .sand-point-container {
+        width: calc(33.33vw - 8px - 1rem);
+        max-width: calc(400px - 8px - 1rem);
+
+        justify-content: center;
+    }
+
+    #summer-2024-campaign .sand-point-container p {        
+        font-size: min(1.7vw, 1.35rem);
+    }
+
+    #sand-point-container-01 {
+        grid-column: 1;
+
+        justify-self: center;
+
+        margin: 0;
+    }
+
+    #sand-point-container-02 {
+        grid-column: 3;
+
+        justify-self: center;
+
+        margin: 0;
+    }
+
+    #sand-point-container-03 {
+        grid-column: 2;
+
+        justify-self: center;
+
+        margin: 0;
+    }
+
+    #summer-2024-campaign #sand-point-container-01 h4, #summer-2024-campaign #sand-point-container-02 h4, #summer-2024-campaign #sand-point-container-03 h4 {
+        margin: 2.25rem 0 0.5rem 0;
+
+        font-size: min(3.2vw, 2.2rem);
+    }
+
+    #summer-2024-campaign #sand-point-container-01 p, #summer-2024-campaign #sand-point-container-02 p, #summer-2024-campaign #sand-point-container-03 p {
+        margin: 0 min(3.5vw, 2.5rem) 0 min(3.5vw, 2.5rem);
+
+        padding: 0;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #latest {
+        overflow: visible;
+    }
+}
