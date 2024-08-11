@@ -248,6 +248,8 @@
 
     border: solid min(1.5vw, 0.5rem) #fff;
 
+    box-shadow: 0.25rem 0.25rem 0.5rem 0.25rem rgba(0, 0, 0, 0.2);
+
     aspect-ratio: 1 / 1;
 
     background-repeat: no-repeat;
@@ -291,6 +293,62 @@
 
     background-image: url('/assets/img/hero/photos/06_250.jpeg');
     background-position: 50% 50%;
+}
+
+#summer-2024-campaign .illustration {
+    position: absolute;
+
+    z-index: 1;
+
+    aspect-ratio: 1 / 1;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 50%;
+}
+
+/* ------- Illustration 1 ------- */
+#summer-2024-campaign #illustration-01 {
+    width: 35vw;
+
+    transform: rotate(-30deg);
+
+    top: -5vw;
+    left: 5vw;
+
+    background-image: url("/assets/img/hero/photos/illustrations/spark.svg");
+}
+
+/* ------- Illustration 2 ------- */
+#summer-2024-campaign #illustration-02 {
+    width: 55vw;
+
+    right: -10vw;
+    top: 77vw;
+
+    background-image: url("/assets/img/hero/photos/illustrations/ice_cream.svg");
+}
+
+/* ------- Illustration 3 ------- */
+#summer-2024-campaign #illustration-03 {
+    width: 60vw;
+
+    transform: rotate(45deg);
+
+    left: -9vw;
+    top: 173vw;
+
+    background-image: url("/assets/img/hero/photos/illustrations/stars.svg");
+}
+
+/* ------- Illustration 4 ------- */
+#summer-2024-campaign #illustration-04 {
+    width: 35vw;
+
+    right: 15vw;
+    top: 268vw;
+
+    background-image: url("/assets/img/hero/photos/illustrations/heart.svg");
 }
 
 /* ======= CALL TO ACTION CONTAINER ======= */
@@ -393,6 +451,40 @@
     #summer-2024-campaign .call-to-action-container a {
         margin-top: 3rem;
     }
+
+    /* ------- Illustration 1 ------- */
+    #summer-2024-campaign #illustration-01 {
+        width: 20vw;
+
+        transform: rotate(-15deg);
+
+        top: -12vw;
+        left: 10vw;
+    }
+
+    /* ------- Illustration 2 ------- */
+    #summer-2024-campaign #illustration-02 {
+        width: 27vw;
+
+        left: 36vw;
+        top: 25vw;
+    }
+
+    /* ------- Illustration 3 ------- */
+    #summer-2024-campaign #illustration-03 {
+        width: 35vw;
+
+        left: 4vw;
+        top: 70vw;
+    }
+
+    /* ------- Illustration 4 ------- */
+    #summer-2024-campaign #illustration-04 {
+        width: 20vw;
+
+        right: 2vw;
+        top: 91vw;
+    }
 }
 
 @media screen and (min-width: 900px) {
@@ -440,7 +532,7 @@
     }
 
     #summer-2024-campaign .sand-overflow-container-outer {
-        height: 900px;
+        height: 950px;
     }
 
     /* ------- Photo 4 ------- */
@@ -469,6 +561,44 @@
         right: unset;
 
         margin-left: max(56vw, 38rem);
+    }
+
+    /* ------- Illustration 1 ------- */
+    #summer-2024-campaign #illustration-01 {
+        width: 17vw;
+
+        transform: rotate(-13deg);
+
+        top: -11vw;
+        left: 7vw;
+    }
+
+    /* ------- Illustration 2 ------- */
+    #summer-2024-campaign #illustration-02 {
+        width: 20vw;
+
+        left: 57.5vw;
+        top: -3.5vw;
+    }
+
+    /* ------- Illustration 3 ------- */
+    #summer-2024-campaign #illustration-03 {
+        width: 25vw;
+
+        transform: rotate(10deg);
+
+        left: 22vw;
+        top: 19vw;
+    }
+
+    /* ------- Illustration 4 ------- */
+    #summer-2024-campaign #illustration-04 {
+        width: 13vw;
+
+        transform: rotate(30deg);
+
+        right: max(1vw, 0.5rem);
+        top: max(44vw, 30rem);
     }
 }
 
@@ -517,5 +647,37 @@
 
         margin-left: 41rem;
         top: 26rem;
+    }
+
+    /* ------- Illustration 1 ------- */
+    #summer-2024-campaign #illustration-01 {
+        width: 200px;
+
+        top: -120px;
+        left: 85px;
+    }
+
+    /* ------- Illustration 2 ------- */
+    #summer-2024-campaign #illustration-02 {
+        width: 240px;
+
+        left: 690px;
+        top: -10px;
+    }
+
+    /* ------- Illustration 3 ------- */
+    #summer-2024-campaign #illustration-03 {
+        width: 300px;
+
+        left: 264px;
+        top: 240px;
+    }
+
+    /* ------- Illustration 4 ------- */
+    #summer-2024-campaign #illustration-04 {
+        width: 156px;
+
+        right: 12px;
+        top: 528px;
     }
 }
