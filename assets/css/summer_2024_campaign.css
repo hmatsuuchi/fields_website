@@ -152,7 +152,8 @@
 
     font-family: "Rampart One", sans-serif;
     font-size: min(11.5vw, 6rem);
-    font-weight: 900;
+    font-weight: 400;
+    font-style: normal;
 }
 
 #summer-2024-campaign h3 {
@@ -224,7 +225,7 @@
     margin-top: -12rem;
 
     width: 100vw;
-    height: 2100px;
+    height: 2400px;
 
     display: grid;
     justify-items: center;
@@ -349,6 +350,16 @@
     top: 268vw;
 
     background-image: url("/assets/img/hero/photos/illustrations/heart.svg");
+}
+
+/* ------- Illustration 5 ------- */
+#summer-2024-campaign #illustration-05 {
+    display: none;
+}
+
+/* ------- Illustration 6 ------- */
+#summer-2024-campaign #illustration-06 {
+    display: none;
 }
 
 /* ======= CALL TO ACTION CONTAINER ======= */
@@ -485,6 +496,20 @@
         right: 2vw;
         top: 91vw;
     }
+
+    /* ------- Illustration 5 ------- */
+    #summer-2024-campaign #illustration-05 {
+        display: block;
+
+        width: 22vw;
+
+        transform: rotate(50deg);
+
+        top: 5vw;
+        left: 84vw;
+
+        background-image: url("/assets/img/hero/photos/illustrations/rainbow.svg");
+    }
 }
 
 @media screen and (min-width: 900px) {
@@ -600,6 +625,30 @@
         right: max(1vw, 0.5rem);
         top: max(44vw, 30rem);
     }
+
+    /* ------- Illustration 5 ------- */
+    #summer-2024-campaign #illustration-05 {
+        width: 17vw;
+
+        transform: rotate(50deg);
+
+        top: -1.5vw;
+        left: min(89vw, 66.5rem);
+    }
+
+    /* ------- Illustration 6 ------- */
+    #summer-2024-campaign #illustration-06 {
+        display: block;
+
+        width: 18vw;
+
+        transform: rotate(-15deg);
+
+        top: max(40vw, 23.5rem);
+        left: 0;
+
+        background-image: url("/assets/img/hero/photos/illustrations/flag.svg");
+    }
 }
 
 @media screen and (min-width: 1200px) {
@@ -679,5 +728,23 @@
 
         right: 12px;
         top: 528px;
+    }
+
+    /* ------- Illustration 5 ------- */
+    #summer-2024-campaign #illustration-05 {
+        width: 200px;
+
+        transform: rotate(40deg);
+
+        top: 0px;
+        left: 1050px;
+    }
+
+    /* ------- Illustration 6 ------- */
+    #summer-2024-campaign #illustration-06 {
+        width: 200px;
+
+        top: 480px;
+        left: -10px;
     }
 }
