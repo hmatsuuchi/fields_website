@@ -32,14 +32,14 @@
 #summer-2024-campaign .polaroid {
     position: absolute;
 
-    border-top: solid min(3vw, calc(1200px * 0.03)) #fff;
-    border-right: solid min(3vw, calc(1200px * 0.03)) #fff;
-    border-bottom: solid min(9vw, calc(1200px * 0.09)) #fff;
-    border-left: solid min(3vw, calc(1200px * 0.03)) #fff;
+    border-top: solid min(3vw, calc(1200px * 0.03)) #f0f0f0;
+    border-right: solid min(3vw, calc(1200px * 0.03)) #f0f0f0;
+    border-bottom: solid min(9vw, calc(1200px * 0.09)) #f0f0f0;
+    border-left: solid min(3vw, calc(1200px * 0.03)) #f0f0f0;
 
     aspect-ratio: 1 / 1;
 
-    background-color: #fff;
+    background-color: #f0f0f0;
     background-repeat: no-repeat;
 
     box-shadow: 0.25rem 0.25rem 0.5rem 0.25rem rgba(0, 0, 0, 0.2);
@@ -128,7 +128,7 @@
 /* ======= SEA CONTAINER ======= */
 
 #summer-2024-campaign .sea-container {
-    background-color: #03AED2;
+    background-color: #6A2C70;
 
     max-height: 1000px;
 
@@ -145,19 +145,19 @@
 }
 
 #summer-2024-campaign h2 {
-    color: #FDDE55;
+    color: #F9ED69;
 
     padding: 0;
     margin-bottom: min(5vw, 1.75rem);
 
-    font-family: "Rampart One", sans-serif;
+    font-family: "Noto Sans JP", sans-serif;
     font-size: min(11.5vw, 6rem);
-    font-weight: 400;
+    font-weight: 600;
     font-style: normal;
 }
 
 #summer-2024-campaign h3 {
-    color: #FDDE55;
+    color: #F9ED69;
 
     font-size: min(4.5vw, 2.25rem);
 }
@@ -166,6 +166,8 @@
 
 #summer-2024-campaign .sand-container {    
     padding-top: 2rem;
+
+    background-color: #F08A5D;
 
     display: grid;
 }
@@ -181,14 +183,12 @@
 #summer-2024-campaign .sand-point-content {
     aspect-ratio: 1 / 1;
 
-    border: solid 3px #fff;
+    border: solid 4px #F9ED69;
     border-radius: 50%;
 
-    background-color: #68D2E8;
+    background-color: #B83B5E;
 
-    box-shadow: 0.25rem 0.25rem 0.5rem 0.25rem rgba(0, 0, 0, 0.2);
-
-    color: rgb(60, 60, 60);
+    color: #ffffff;
 
     display: grid;
     align-content: center;
@@ -247,7 +247,7 @@
 #summer-2024-campaign .polaroid-small {
     position: absolute;
 
-    border: solid min(1.5vw, 0.5rem) #fff;
+    border: solid min(1.5vw, 0.5rem) #f0f0f0;
 
     box-shadow: 0.25rem 0.25rem 0.5rem 0.25rem rgba(0, 0, 0, 0.2);
 
@@ -317,7 +317,7 @@
     top: -5vw;
     left: 5vw;
 
-    background-image: url("/assets/img/hero/photos/illustrations/spark.svg");
+    background-image: url("/assets/img/hero/photos/illustrations/pumpkin.svg");
 }
 
 /* ------- Illustration 2 ------- */
@@ -327,29 +327,31 @@
     right: -10vw;
     top: 77vw;
 
-    background-image: url("/assets/img/hero/photos/illustrations/ice_cream.svg");
+    background-image: url("/assets/img/hero/photos/illustrations/maple.svg");
 }
 
 /* ------- Illustration 3 ------- */
 #summer-2024-campaign #illustration-03 {
     width: 60vw;
 
-    transform: rotate(45deg);
+    transform: rotateY(180deg) rotateZ(10deg);
 
     left: -9vw;
-    top: 173vw;
+    top: 175vw;
 
-    background-image: url("/assets/img/hero/photos/illustrations/stars.svg");
+    background-image: url("/assets/img/hero/photos/illustrations/blue_bird.svg");
 }
 
 /* ------- Illustration 4 ------- */
 #summer-2024-campaign #illustration-04 {
-    width: 35vw;
+    width: 37vw;
 
-    right: 15vw;
-    top: 268vw;
+    transform: rotateZ(-8deg);
 
-    background-image: url("/assets/img/hero/photos/illustrations/heart.svg");
+    right: 2vw;
+    top: 275vw;
+
+    background-image: url("/assets/img/hero/photos/illustrations/mushroom.svg");
 }
 
 /* ------- Illustration 5 ------- */
@@ -367,6 +369,8 @@
     width: 100vw;
     max-width: 1200px;
 
+    background-color: #F08A5D;
+
     display: grid;
     place-content: center;
 }
@@ -374,12 +378,14 @@
 #summer-2024-campaign .call-to-action-container a {
     margin: 1rem 1rem 3rem 1rem;
 
-    background-color: #03AED2;
+    background-color: #6A2C70;
 
     padding: 1rem 3rem;
 
     border-radius: 99rem;
-    border: solid 3px #fff;
+    border: solid 3px #ffffff;
+
+    box-shadow: 0.25rem 0.25rem 0.5rem 0.25rem rgba(0, 0, 0, 0.2);
 
     color: #fff;
     font-size: min(6vw, 1.75rem);
@@ -409,8 +415,6 @@
 
     #summer-2024-campaign .sand-point-content {
         align-content: center;
-
-        border: solid min(0.7vw, 5px) #fff;
     }
 
     #summer-2024-campaign .sand-point-container:nth-child(3) .sand-point-content {
@@ -475,18 +479,18 @@
 
     /* ------- Illustration 2 ------- */
     #summer-2024-campaign #illustration-02 {
-        width: 27vw;
+        width: 21vw;
 
-        left: 36vw;
-        top: 25vw;
+        left: 39vw;
+        top: 33vw;
     }
 
     /* ------- Illustration 3 ------- */
     #summer-2024-campaign #illustration-03 {
         width: 35vw;
 
-        left: 4vw;
-        top: 70vw;
+        left: -1vw;
+        top: 75vw;
     }
 
     /* ------- Illustration 4 ------- */
@@ -501,14 +505,14 @@
     #summer-2024-campaign #illustration-05 {
         display: block;
 
-        width: 22vw;
+        width: 20vw;
 
-        transform: rotate(50deg);
+        transform: rotateY(180deg);
 
-        top: 5vw;
+        top: 2vw;
         left: 84vw;
 
-        background-image: url("/assets/img/hero/photos/illustrations/rainbow.svg");
+        background-image: url("/assets/img/hero/photos/illustrations/acorn.svg");
     }
 }
 
@@ -600,20 +604,18 @@
 
     /* ------- Illustration 2 ------- */
     #summer-2024-campaign #illustration-02 {
-        width: 20vw;
+        width: 18vw;
 
-        left: 57.5vw;
-        top: -3.5vw;
+        left: 57vw;
+        top: -6vw;
     }
 
     /* ------- Illustration 3 ------- */
     #summer-2024-campaign #illustration-03 {
         width: 25vw;
 
-        transform: rotate(10deg);
-
-        left: 22vw;
-        top: 19vw;
+        left: 20vw;
+        top: 21vw;
     }
 
     /* ------- Illustration 4 ------- */
@@ -622,18 +624,16 @@
 
         transform: rotate(30deg);
 
-        right: max(1vw, 0.5rem);
-        top: max(44vw, 30rem);
+        right: max(6vw, 3rem);
+        top: max(50vw, 30rem);
     }
 
     /* ------- Illustration 5 ------- */
     #summer-2024-campaign #illustration-05 {
         width: 17vw;
 
-        transform: rotate(50deg);
-
-        top: -1.5vw;
-        left: min(89vw, 66.5rem);
+        top: 21vw;
+        left: min(85vw, 66.5rem);
     }
 
     /* ------- Illustration 6 ------- */
@@ -642,12 +642,10 @@
 
         width: 18vw;
 
-        transform: rotate(-15deg);
+        top: max(38vw, 22.5rem);
+        left: 3vw;
 
-        top: max(40vw, 23.5rem);
-        left: 0;
-
-        background-image: url("/assets/img/hero/photos/illustrations/flag.svg");
+        background-image: url("/assets/img/hero/photos/illustrations/apple.svg");
     }
 }
 
@@ -708,35 +706,33 @@
 
     /* ------- Illustration 2 ------- */
     #summer-2024-campaign #illustration-02 {
-        width: 240px;
+        width: 220px;
 
-        left: 690px;
-        top: -10px;
+        left: 680px;
+        top: -55px;
     }
 
     /* ------- Illustration 3 ------- */
     #summer-2024-campaign #illustration-03 {
         width: 300px;
 
-        left: 264px;
-        top: 240px;
+        left: 230px;
+        top: 260px;
     }
 
     /* ------- Illustration 4 ------- */
     #summer-2024-campaign #illustration-04 {
         width: 156px;
 
-        right: 12px;
-        top: 528px;
+        right: 100px;
+        top: 590px;
     }
 
     /* ------- Illustration 5 ------- */
     #summer-2024-campaign #illustration-05 {
         width: 200px;
 
-        transform: rotate(40deg);
-
-        top: 0px;
+        top: 260px;
         left: 1050px;
     }
 
@@ -745,6 +741,6 @@
         width: 200px;
 
         top: 480px;
-        left: -10px;
+        left: 40px;
     }
 }
