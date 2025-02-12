@@ -3,6 +3,9 @@
 /* #F6416C - red */
 /* #FFDE7D - yellow */
 
+/* Zen Maru Gothic Font */
+@import url("https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap");
+
 #spring-2025-campaign {
   display: grid;
 }
@@ -37,10 +40,6 @@
 #spring-2025-campaign .polaroid {
   position: absolute;
 
-  /* border-top: solid min(3vw, calc(1200px * 0.03)) #f0f0f0;
-  border-right: solid min(3vw, calc(1200px * 0.03)) #f0f0f0;
-  border-bottom: solid min(9vw, calc(1200px * 0.09)) #f0f0f0;
-  border-left: solid min(3vw, calc(1200px * 0.03)) #f0f0f0; */
   border: solid min(3vw, calc(1200px * 0.03)) #f0f0f0;
 
   aspect-ratio: 1 / 1;
@@ -161,16 +160,29 @@
   color: #ffffff;
 
   padding: 0;
-  margin-bottom: min(5vw, 1.75rem);
 
-  font-family: "Noto Sans JP", sans-serif;
-  font-size: min(11.5vw, 6rem);
-  font-weight: 600;
+  font-family: "Zen Maru Gothic", serif;
+  font-size: min(13vw, 8rem);
+  font-weight: 700;
   font-style: normal;
 }
 
 #spring-2025-campaign h3 {
   color: #ffffff;
+
+  font-family: "Zen Maru Gothic", serif;
+  font-size: min(7vw, 4rem);
+  font-weight: 500;
+  font-style: normal;
+
+  margin-bottom: min(9vw, 5rem);
+}
+
+#spring-2025-campaign h4 {
+  color: #ffffff;
+
+  font-family: "Zen Maru Gothic", serif;
+  font-weight: 400;
 
   font-size: min(4.5vw, 2.25rem);
 }
@@ -207,7 +219,7 @@
   align-content: center;
 }
 
-#spring-2025-campaign .sand-point-content h4,
+#spring-2025-campaign .sand-point-content h5,
 #spring-2025-campaign .sand-point-content p {
   text-align: center;
 
@@ -215,7 +227,7 @@
   padding: 0;
 }
 
-#spring-2025-campaign .sand-point-content h4 {
+#spring-2025-campaign .sand-point-content h5 {
   margin-bottom: 0.5rem;
 
   font-size: min(8vw, 99rem);
@@ -437,14 +449,14 @@
     align-content: start;
   }
 
-  #spring-2025-campaign .sand-point-content h4 {
+  #spring-2025-campaign .sand-point-content h5 {
     font-size: 4.5vw;
   }
 
   #spring-2025-campaign
     .bottom-point-container:nth-child(3)
     .sand-point-content
-    h4 {
+    h5 {
     margin-top: max(5.5vw, 1.9rem);
   }
 
@@ -558,7 +570,7 @@
     width: auto;
   }
 
-  #spring-2025-campaign .sand-point-content h4 {
+  #spring-2025-campaign .sand-point-content h5 {
     margin-top: min(3.5vw, 4rem);
 
     font-size: 3vw;
@@ -567,7 +579,7 @@
   #spring-2025-campaign
     .bottom-point-container:nth-child(3)
     .sand-point-content
-    h4 {
+    h5 {
     margin-top: min(3.5vw, 4rem);
 
     font-size: 3vw;
@@ -680,7 +692,7 @@
 }
 
 @media screen and (min-width: 1200px) {
-  #spring-2025-campaign .sand-point-content h4 {
+  #spring-2025-campaign .sand-point-content h5 {
     margin-top: 4rem;
 
     font-size: 2.3rem;
@@ -689,7 +701,7 @@
   #spring-2025-campaign
     .bottom-point-container:nth-child(3)
     .sand-point-content
-    h4 {
+    h5 {
     margin-top: 4rem;
 
     font-size: 2.3rem;
