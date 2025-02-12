@@ -14,7 +14,7 @@
 
   overflow: hidden;
 
-  top: 0;
+  top: 90vh;
   right: 0;
 
   width: 100vw;
@@ -37,10 +37,11 @@
 #spring-2025-campaign .polaroid {
   position: absolute;
 
-  border-top: solid min(3vw, calc(1200px * 0.03)) #f0f0f0;
+  /* border-top: solid min(3vw, calc(1200px * 0.03)) #f0f0f0;
   border-right: solid min(3vw, calc(1200px * 0.03)) #f0f0f0;
   border-bottom: solid min(9vw, calc(1200px * 0.09)) #f0f0f0;
-  border-left: solid min(3vw, calc(1200px * 0.03)) #f0f0f0;
+  border-left: solid min(3vw, calc(1200px * 0.03)) #f0f0f0; */
+  border: solid min(3vw, calc(1200px * 0.03)) #f0f0f0;
 
   aspect-ratio: 1 / 1;
 
@@ -148,8 +149,8 @@
 }
 
 #spring-2025-campaign .main-text-container {
-  margin-top: min(53vw, 650px);
-  margin-bottom: 10vw;
+  margin-top: min(calc(50vw - 10vh), calc(570px - 10vh));
+  margin-bottom: min(11vw, 80px);
 
   place-self: center;
 
@@ -327,7 +328,7 @@
 
   transform: rotate(-40deg);
 
-  top: -15vw;
+  top: -21vw;
   left: 8vw;
 
   background-image: url("/assets/img/spring_2025_campaign/illustrations/butterfly.svg");
@@ -357,12 +358,12 @@
 
 /* ------- Illustration 4 ------- */
 #spring-2025-campaign #illustration-04 {
-  width: 45vw;
+  width: 41vw;
 
   transform: rotateY(180deg) rotateZ(15deg);
 
-  right: 0vw;
-  top: 272vw;
+  right: 2vw;
+  top: 274vw;
 
   background-image: url("/assets/img/spring_2025_campaign/illustrations/watering_can.svg");
 }
@@ -516,10 +517,10 @@
 
   /* ------- Illustration 4 ------- */
   #spring-2025-campaign #illustration-04 {
-    width: 25vw;
+    width: 23vw;
 
-    right: 0vw;
-    top: 88vw;
+    right: 1vw;
+    top: 94vw;
   }
 
   /* ------- Illustration 5 ------- */
@@ -647,12 +648,12 @@
 
   /* ------- Illustration 4 ------- */
   #spring-2025-campaign #illustration-04 {
-    width: 18vw;
+    width: 16vw;
 
     transform: rotate(20deg);
 
-    right: min(27vw, 20rem);
-    top: min(45vw, 30rem);
+    right: min(28vw, 20rem);
+    top: min(46vw, 30rem);
   }
 
   /* ------- Illustration 5 ------- */
@@ -667,12 +668,12 @@
   #spring-2025-campaign #illustration-06 {
     display: block;
 
-    width: 22vw;
+    width: 20vw;
 
     transform: rotateZ(15deg);
 
-    top: 38vw;
-    left: 0;
+    top: 41vw;
+    left: 1vw;
 
     background-image: url("/assets/img/spring_2025_campaign/illustrations/plant.svg");
   }
@@ -773,9 +774,9 @@
 
   /* ------- Illustration 6 ------- */
   #spring-2025-campaign #illustration-06 {
-    width: 230px;
+    width: 210px;
 
-    top: 480px;
-    left: 0;
+    top: 490px;
+    left: 10px;
   }
 }

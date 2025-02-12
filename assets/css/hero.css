@@ -1,3 +1,78 @@
 #hero {
   padding: 0;
+
+  height: 100vh;
+
+  background-color: #00b8a9;
+
+  display: grid;
+  place-content: center;
+}
+
+#hero .logo-container {
+  width: min(80vw, 90vh);
+  max-width: 1000px;
+
+  margin-top: -9vh;
+
+  display: grid;
+  grid-auto-flow: row;
+  justify-items: center;
+}
+
+@keyframes fade-in-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#hero .logo-container .logo-graphic {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+  opacity: 0;
+
+  animation: fade-in-animation 1000ms ease-out forwards;
+}
+
+#hero .logo-container .fields-logo-sky {
+  width: 100%;
+  aspect-ratio: 1186 / 117;
+
+  background-image: url("/assets/img/hero/fields_logo_sky.svg");
+
+  animation-delay: 1500ms;
+}
+
+#hero .logo-container .fields_logo_text_01 {
+  width: 90%;
+  aspect-ratio: 1080 / 385;
+
+  margin: 7% 0;
+
+  background-image: url("/assets/img/hero/fields_logo_text_01.svg");
+
+  animation-delay: 500ms;
+}
+
+#hero .logo-container .fields-logo-ground {
+  width: 100%;
+  aspect-ratio: 1186 / 117;
+
+  background-image: url("/assets/img/hero/fields_logo_ground.svg");
+
+  animation-delay: 1500ms;
+}
+
+#hero .logo-container .fields_logo_text_02 {
+  width: 50%;
+  aspect-ratio: 506 / 61;
+
+  background-image: url("/assets/img/hero/fields_logo_text_02.svg");
+
+  animation-delay: 2500ms;
 }
