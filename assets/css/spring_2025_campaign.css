@@ -1,0 +1,781 @@
+/* #00b8a9 - teal */
+/* #F8F3D4 - beige */
+/* #F6416C - red */
+/* #FFDE7D - yellow */
+
+#spring-2025-campaign {
+  display: grid;
+}
+
+/* ======= PHOTO CONTAINER ======= */
+
+#spring-2025-campaign .outer-photo-overflow-container {
+  position: absolute;
+
+  overflow: hidden;
+
+  top: 0;
+  right: 0;
+
+  width: 100vw;
+  height: 100vh;
+  max-height: 1000px;
+}
+#spring-2025-campaign .inner-photo-overflow-container {
+  position: relative;
+
+  top: 0;
+  right: 0;
+
+  width: 100%;
+  max-width: 1200px;
+  height: 30vh;
+
+  margin: 0 auto;
+}
+
+#spring-2025-campaign .polaroid {
+  position: absolute;
+
+  border-top: solid min(3vw, calc(1200px * 0.03)) #f0f0f0;
+  border-right: solid min(3vw, calc(1200px * 0.03)) #f0f0f0;
+  border-bottom: solid min(9vw, calc(1200px * 0.09)) #f0f0f0;
+  border-left: solid min(3vw, calc(1200px * 0.03)) #f0f0f0;
+
+  aspect-ratio: 1 / 1;
+
+  background-color: #f0f0f0;
+  background-repeat: no-repeat;
+
+  box-shadow: 0.25rem 0.25rem 0.5rem 0.25rem rgba(0, 0, 0, 0.2);
+}
+
+@supports (-webkit-backdrop-filter: none) {
+  #spring-2025-campaign .polaroid {
+    border-bottom: solid min(3vw, calc(1200px * 0.03)) #fff;
+  }
+}
+
+#spring-2025-campaign .photo {
+  aspect-ratio: 1 / 1;
+
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+
+  background-size: cover;
+}
+
+/* ------- Photo 1 ------- */
+
+#spring-2025-campaign .photo-1 {
+  z-index: 3;
+
+  width: 35vw;
+  max-width: calc(1200px * 0.35);
+
+  top: min(3vw, calc(1200px * 0.03));
+  left: max(-3vw, calc(-1200px * 0.03));
+
+  transform: rotate(-5deg);
+}
+
+#spring-2025-campaign .photo-1 .photo {
+  width: 35vw;
+  max-width: calc(1200px * 0.35);
+
+  background-image: url("/assets/img/spring_2025_campaign/02_700.jpg");
+  background-position: 40% 50%;
+}
+
+/* ------- Photo 2 ------- */
+
+#spring-2025-campaign .photo-2 {
+  z-index: 2;
+
+  width: 35vw;
+  max-width: calc(1200px * 0.35);
+
+  top: min(2vw, calc(1200px * 0.02));
+  left: min(
+    calc(
+      (100vw - min(35vw, 1200px * 0.35) - min(3vw, calc(1200px * 0.03))) / 2
+    ),
+    calc(
+      (1200px - min(35vw, 1200px * 0.35) - min(3vw, calc(1200px * 0.03))) / 2
+    )
+  );
+
+  transform: rotate(1deg);
+}
+
+#spring-2025-campaign .photo-2 .photo {
+  width: 35vw;
+  max-width: calc(1200px * 0.35);
+
+  background-image: url("/assets/img/spring_2025_campaign/03_700.jpg");
+  background-position: 70% 50%;
+}
+
+/* ------- Photo 3 ------- */
+
+#spring-2025-campaign .photo-3 {
+  z-index: 1;
+
+  width: 35vw;
+  max-width: calc(1200px * 0.35);
+
+  top: min(3vw, calc(1200px * 0.03));
+  right: max(-3vw, calc(-1200px * 0.03));
+
+  transform: rotate(5deg);
+}
+
+#spring-2025-campaign .photo-3 .photo {
+  width: 35vw;
+  max-width: calc(1200px * 0.35);
+
+  background-image: url("/assets/img/spring_2025_campaign/01_700.jpg");
+  background-position: 70% 50%;
+}
+
+/* ======= SEA CONTAINER ======= */
+
+#spring-2025-campaign .spring-2025-top-container {
+  background-color: #95c9d1;
+
+  max-height: 1000px;
+
+  display: grid;
+}
+
+#spring-2025-campaign .main-text-container {
+  margin-top: min(53vw, 650px);
+  margin-bottom: 10vw;
+
+  place-self: center;
+
+  text-align: center;
+}
+
+#spring-2025-campaign h2 {
+  color: #ffffff;
+
+  padding: 0;
+  margin-bottom: min(5vw, 1.75rem);
+
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: min(11.5vw, 6rem);
+  font-weight: 600;
+  font-style: normal;
+}
+
+#spring-2025-campaign h3 {
+  color: #ffffff;
+
+  font-size: min(4.5vw, 2.25rem);
+}
+
+/* ======= SAND CONTAINER ======= */
+
+#spring-2025-campaign .spring-2025-bottom-container {
+  padding-top: 2rem;
+
+  background-color: #d4eb9bff;
+
+  display: grid;
+}
+
+#spring-2025-campaign .bottom-point-container {
+  padding: 1rem;
+}
+
+#spring-2025-campaign .bottom-point-container:nth-child(3) {
+  grid-row: 2;
+}
+
+#spring-2025-campaign .sand-point-content {
+  aspect-ratio: 1 / 1;
+
+  border: solid 4px #e2d7b7ff;
+  border-radius: 50%;
+
+  background-color: #f2ebd2ff;
+
+  color: rgb(70, 70, 70);
+
+  display: grid;
+  align-content: center;
+}
+
+#spring-2025-campaign .sand-point-content h4,
+#spring-2025-campaign .sand-point-content p {
+  text-align: center;
+
+  margin: 0;
+  padding: 0;
+}
+
+#spring-2025-campaign .sand-point-content h4 {
+  margin-bottom: 0.5rem;
+
+  font-size: min(8vw, 99rem);
+}
+
+#spring-2025-campaign .sand-point-content p {
+  padding: 0 min(8vw, 99rem);
+
+  font-size: min(4.75vw, 99rem);
+}
+
+#spring-2025-campaign .sand-overflow-container-outer {
+  position: absolute;
+
+  pointer-events: none;
+
+  overflow: hidden;
+
+  left: 0;
+
+  margin-top: -12rem;
+
+  width: 100vw;
+  height: 2400px;
+
+  display: grid;
+  justify-items: center;
+}
+
+#spring-2025-campaign .sand-overflow-container-inner {
+  position: relative;
+
+  width: 100vw;
+  height: 100%;
+
+  margin-top: 12rem;
+
+  max-width: 1200px;
+
+  display: grid;
+}
+
+#spring-2025-campaign .polaroid-small {
+  position: absolute;
+
+  border: solid min(1.5vw, 0.5rem) #f0f0f0;
+
+  box-shadow: 0.25rem 0.25rem 0.5rem 0.25rem rgba(0, 0, 0, 0.2);
+
+  aspect-ratio: 1 / 1;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* ------- Photo 4 ------- */
+#spring-2025-campaign #photo-04 {
+  width: 37vw;
+
+  right: -1rem;
+  top: min(-12vw, -2.9rem);
+
+  transform: rotate(5deg);
+
+  background-image: url("/assets/img/spring_2025_campaign/04_adjusted_500.jpg");
+  background-position: 50% 50%;
+}
+
+/* ------- Photo 5 ------- */
+#spring-2025-campaign #photo-05 {
+  width: 40vw;
+
+  left: -1rem;
+  top: max(80vw, 14.75rem);
+
+  transform: rotate(-5deg);
+
+  background-image: url("/assets/img/spring_2025_campaign/08_adjusted_500.jpg");
+  background-position: 30% 50%;
+}
+
+/* ------- Photo 6 ------- */
+#spring-2025-campaign #photo-06 {
+  width: 35vw;
+
+  right: 1.5rem;
+  top: max(185vw, 34.75rem);
+
+  transform: rotate(2deg);
+
+  background-image: url("/assets/img/spring_2025_campaign/05_adjusted_500.jpg");
+  background-position: 50% 50%;
+}
+
+#spring-2025-campaign .illustration {
+  position: absolute;
+
+  z-index: 1;
+
+  aspect-ratio: 1 / 1;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+}
+
+/* ------- Illustration 1 ------- */
+#spring-2025-campaign #illustration-01 {
+  width: 40vw;
+
+  transform: rotate(-40deg);
+
+  top: -15vw;
+  left: 8vw;
+
+  background-image: url("/assets/img/spring_2025_campaign/illustrations/butterfly.svg");
+}
+
+/* ------- Illustration 2 ------- */
+#spring-2025-campaign #illustration-02 {
+  width: 50vw;
+
+  right: -7vw;
+  top: 77vw;
+
+  background-image: url("/assets/img/spring_2025_campaign/illustrations/cloud.svg");
+}
+
+/* ------- Illustration 3 ------- */
+#spring-2025-campaign #illustration-03 {
+  width: 50vw;
+
+  transform: rotateZ(10deg);
+
+  left: -4vw;
+  top: 178vw;
+
+  background-image: url("/assets/img/spring_2025_campaign/illustrations/chicken.svg");
+}
+
+/* ------- Illustration 4 ------- */
+#spring-2025-campaign #illustration-04 {
+  width: 45vw;
+
+  transform: rotateY(180deg) rotateZ(15deg);
+
+  right: 0vw;
+  top: 272vw;
+
+  background-image: url("/assets/img/spring_2025_campaign/illustrations/watering_can.svg");
+}
+
+/* ------- Illustration 5 ------- */
+#spring-2025-campaign #illustration-05 {
+  display: none;
+}
+
+/* ------- Illustration 6 ------- */
+#spring-2025-campaign #illustration-06 {
+  display: none;
+}
+
+/* ======= CALL TO ACTION CONTAINER ======= */
+#spring-2025-campaign .call-to-action-container {
+  width: 100vw;
+  max-width: 1200px;
+
+  background-color: #d4eb9bff;
+
+  display: grid;
+  place-content: center;
+}
+
+#spring-2025-campaign .call-to-action-container a {
+  margin: 1rem 1rem 3rem 1rem;
+
+  background-color: #fa9696;
+
+  padding: 1rem 3rem;
+
+  border-radius: 99rem;
+  border: solid 3px #ffffff;
+
+  box-shadow: 0.25rem 0.25rem 0.5rem 0.25rem rgba(0, 0, 0, 0.2);
+
+  color: #fff;
+  font-size: min(6vw, 1.75rem);
+  text-align: center;
+
+  cursor: pointer;
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media screen and (min-width: 600px) {
+  #spring-2025-campaign .spring-2025-bottom-container {
+    padding-top: 3rem;
+
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #spring-2025-campaign .bottom-point-container:nth-child(3) {
+    grid-column: 1 / 3;
+
+    width: calc(50vw - 2rem);
+
+    margin-top: -2.5rem;
+
+    justify-self: center;
+  }
+
+  #spring-2025-campaign .sand-point-content {
+    align-content: center;
+  }
+
+  #spring-2025-campaign
+    .bottom-point-container:nth-child(3)
+    .sand-point-content {
+    align-content: start;
+  }
+
+  #spring-2025-campaign .sand-point-content h4 {
+    font-size: 4.5vw;
+  }
+
+  #spring-2025-campaign
+    .bottom-point-container:nth-child(3)
+    .sand-point-content
+    h4 {
+    margin-top: max(5.5vw, 1.9rem);
+  }
+
+  #spring-2025-campaign .sand-point-content p {
+    padding: 0 5vw;
+
+    font-size: 2.5vw;
+  }
+
+  #spring-2025-campaign
+    .bottom-point-container:nth-child(3)
+    .sand-point-content
+    p {
+    padding: 0 5.5vw;
+  }
+
+  #spring-2025-campaign .sand-overflow-container-outer {
+    height: 1200px;
+  }
+
+  /* ------- Photo 4 ------- */
+  #spring-2025-campaign #photo-04 {
+    width: 20vw;
+  }
+
+  /* ------- Photo 5 ------- */
+  #spring-2025-campaign #photo-05 {
+    width: 30vw;
+
+    top: max(44vw, 16rem);
+  }
+
+  /* ------- Photo 6 ------- */
+  #spring-2025-campaign #photo-06 {
+    width: 25vw;
+
+    right: 2rem;
+    top: max(70vw, 27rem);
+  }
+
+  #spring-2025-campaign .call-to-action-container a {
+    margin-top: 3rem;
+  }
+
+  /* ------- Illustration 1 ------- */
+  #spring-2025-campaign #illustration-01 {
+    width: 26vw;
+
+    transform: rotate(-30deg);
+
+    top: -16vw;
+    left: 12vw;
+  }
+
+  /* ------- Illustration 2 ------- */
+  #spring-2025-campaign #illustration-02 {
+    width: 33vw;
+
+    right: 5vw;
+    top: 33vw;
+  }
+
+  /* ------- Illustration 3 ------- */
+  #spring-2025-campaign #illustration-03 {
+    width: 34vw;
+
+    left: 0;
+    top: 69vw;
+  }
+
+  /* ------- Illustration 4 ------- */
+  #spring-2025-campaign #illustration-04 {
+    width: 25vw;
+
+    right: 0vw;
+    top: 88vw;
+  }
+
+  /* ------- Illustration 5 ------- */
+  #spring-2025-campaign #illustration-05 {
+    display: block;
+
+    width: 20vw;
+
+    transform: rotateY(0deg);
+
+    top: 2vw;
+    right: -7vw;
+
+    background-image: url("/assets/img/spring_2025_campaign/illustrations/chick.svg");
+  }
+}
+
+@media screen and (min-width: 900px) {
+  #spring-2025-campaign .spring-2025-bottom-container {
+    padding-top: 3rem;
+
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #spring-2025-campaign .sand-point-content {
+    align-content: start;
+  }
+
+  #spring-2025-campaign .bottom-point-container:nth-child(3) {
+    grid-column: 2;
+    grid-row: 1;
+
+    margin-top: revert;
+
+    width: auto;
+  }
+
+  #spring-2025-campaign .sand-point-content h4 {
+    margin-top: min(3.5vw, 4rem);
+
+    font-size: 3vw;
+  }
+
+  #spring-2025-campaign
+    .bottom-point-container:nth-child(3)
+    .sand-point-content
+    h4 {
+    margin-top: min(3.5vw, 4rem);
+
+    font-size: 3vw;
+  }
+
+  #spring-2025-campaign .sand-point-content p {
+    padding: 0 min(2vw, 2rem);
+
+    font-size: max(1.6vw, 0.9rem);
+  }
+
+  #spring-2025-campaign
+    .bottom-point-container:nth-child(3)
+    .sand-point-content
+    p {
+    padding: 0 min(2vw, 2rem);
+
+    font-size: max(1.6vw, 0.9rem);
+  }
+
+  #spring-2025-campaign .sand-overflow-container-outer {
+    height: 950px;
+  }
+
+  /* ------- Photo 4 ------- */
+  #spring-2025-campaign #photo-04 {
+    width: 15.5vw;
+
+    top: min(-12vw, -3rem);
+  }
+
+  /* ------- Photo 5 ------- */
+  #spring-2025-campaign #photo-05 {
+    width: 20vw;
+
+    top: max(26vw, 14rem);
+  }
+
+  /* ------- Photo 6 ------- */
+  #spring-2025-campaign #photo-06 {
+    justify-self: center;
+
+    width: 20vw;
+
+    transform: rotate(-2deg);
+
+    top: max(35vw, 22rem);
+    right: unset;
+
+    margin-left: max(56vw, 38rem);
+  }
+
+  /* ------- Illustration 1 ------- */
+  #spring-2025-campaign #illustration-01 {
+    width: 18vw;
+
+    transform: rotate(-13deg);
+
+    top: -11vw;
+    left: 8vw;
+  }
+
+  /* ------- Illustration 2 ------- */
+  #spring-2025-campaign #illustration-02 {
+    width: 21vw;
+
+    right: 23vw;
+    top: -9vw;
+  }
+
+  /* ------- Illustration 3 ------- */
+  #spring-2025-campaign #illustration-03 {
+    width: 23vw;
+
+    left: 20vw;
+    top: 20vw;
+  }
+
+  /* ------- Illustration 4 ------- */
+  #spring-2025-campaign #illustration-04 {
+    width: 18vw;
+
+    transform: rotate(20deg);
+
+    right: min(27vw, 20rem);
+    top: min(45vw, 30rem);
+  }
+
+  /* ------- Illustration 5 ------- */
+  #spring-2025-campaign #illustration-05 {
+    width: 15vw;
+
+    top: 22vw;
+    left: min(86vw, 66.5rem);
+  }
+
+  /* ------- Illustration 6 ------- */
+  #spring-2025-campaign #illustration-06 {
+    display: block;
+
+    width: 22vw;
+
+    transform: rotateZ(15deg);
+
+    top: 38vw;
+    left: 0;
+
+    background-image: url("/assets/img/spring_2025_campaign/illustrations/plant.svg");
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #spring-2025-campaign .sand-point-content h4 {
+    margin-top: 4rem;
+
+    font-size: 2.3rem;
+  }
+
+  #spring-2025-campaign
+    .bottom-point-container:nth-child(3)
+    .sand-point-content
+    h4 {
+    margin-top: 4rem;
+
+    font-size: 2.3rem;
+  }
+
+  #spring-2025-campaign .sand-point-content p {
+    padding: 0 2rem;
+
+    font-size: 1.2rem;
+  }
+
+  #spring-2025-campaign
+    .bottom-point-container:nth-child(3)
+    .sand-point-content
+    p {
+    padding: 0 2rem;
+
+    font-size: 1.2rem;
+  }
+
+  /* ------- Photo 4 ------- */
+  #spring-2025-campaign #photo-04 {
+    width: 12rem;
+
+    top: -8rem;
+  }
+
+  /* ------- Photo 5 ------- */
+  #spring-2025-campaign #photo-05 {
+    width: 15rem;
+
+    top: 20rem;
+  }
+
+  /* ------- Photo 6 ------- */
+  #spring-2025-campaign #photo-06 {
+    width: 15rem;
+
+    margin-left: 41rem;
+    top: 26rem;
+  }
+
+  /* ------- Illustration 1 ------- */
+  #spring-2025-campaign #illustration-01 {
+    width: 200px;
+
+    top: -115px;
+    left: 90px;
+  }
+
+  /* ------- Illustration 2 ------- */
+  #spring-2025-campaign #illustration-02 {
+    width: 280px;
+
+    right: 260px;
+    top: -140px;
+  }
+
+  /* ------- Illustration 3 ------- */
+  #spring-2025-campaign #illustration-03 {
+    width: 290px;
+
+    left: 230px;
+    top: 250px;
+  }
+
+  /* ------- Illustration 4 ------- */
+  #spring-2025-campaign #illustration-04 {
+    width: 200px;
+
+    right: 0;
+    top: 550px;
+  }
+
+  /* ------- Illustration 5 ------- */
+  #spring-2025-campaign #illustration-05 {
+    width: 170px;
+
+    top: 275px;
+    left: 1040px;
+  }
+
+  /* ------- Illustration 6 ------- */
+  #spring-2025-campaign #illustration-06 {
+    width: 230px;
+
+    top: 480px;
+    left: 0;
+  }
+}
