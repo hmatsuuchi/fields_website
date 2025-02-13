@@ -1,7 +1,7 @@
 #hero {
   padding: 0;
 
-  height: 100vh;
+  height: 100svh;
 
   background-color: #00b8a9;
 
@@ -10,10 +10,10 @@
 }
 
 #hero .logo-container {
-  width: min(80vw, 90vh);
+  width: min(80vw, 90svh);
   max-width: 1000px;
 
-  margin-top: -9vh;
+  margin-top: -9svh;
 
   display: grid;
   grid-auto-flow: row;

@@ -17,11 +17,11 @@
 
   overflow: hidden;
 
-  top: 90vh;
+  top: 90svh;
   right: 0;
 
   width: 100vw;
-  height: 100vh;
+  height: 100svh;
   max-height: 1000px;
 }
 #spring-2025-campaign .inner-photo-overflow-container {
@@ -32,7 +32,7 @@
 
   width: 100%;
   max-width: 1200px;
-  height: 30vh;
+  height: 30svh;
 
   margin: 0 auto;
 }
@@ -148,7 +148,7 @@
 }
 
 #spring-2025-campaign .main-text-container {
-  margin-top: min(calc(50vw - 10vh), calc(570px - 10vh));
+  margin-top: min(calc(55vw - 10svh), calc(570px - 10svh));
   margin-bottom: min(11vw, 80px);
 
   place-self: center;
