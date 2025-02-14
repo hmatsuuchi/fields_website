@@ -20,6 +20,19 @@
   justify-items: center;
 }
 
+/* fix for Firefox lack of support for svh units */
+@-moz-document url-prefix() {
+  #hero {
+    height: 100dvh;
+  }
+
+  #hero .logo-container {
+    width: min(80vw, 90dvh);
+
+    margin-top: -9dvh;
+  }
+}
+
 @keyframes fade-in-animation {
   0% {
     opacity: 0;
@@ -45,7 +58,7 @@
 
   background-image: url("/assets/img/hero/fields_logo_sky.svg");
 
-  animation-delay: 1500ms;
+  animation-delay: 1000ms;
 }
 
 #hero .logo-container .fields_logo_text_01 {
@@ -55,8 +68,6 @@
   margin: 7% 0;
 
   background-image: url("/assets/img/hero/fields_logo_text_01.svg");
-
-  animation-delay: 500ms;
 }
 
 #hero .logo-container .fields-logo-ground {
@@ -65,7 +76,7 @@
 
   background-image: url("/assets/img/hero/fields_logo_ground.svg");
 
-  animation-delay: 1500ms;
+  animation-delay: 1000ms;
 }
 
 #hero .logo-container .fields_logo_text_02 {
@@ -74,5 +85,5 @@
 
   background-image: url("/assets/img/hero/fields_logo_text_02.svg");
 
-  animation-delay: 2500ms;
+  animation-delay: 2000ms;
 }

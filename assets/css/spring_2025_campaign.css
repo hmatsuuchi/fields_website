@@ -24,6 +24,7 @@
   height: 100svh;
   max-height: 1000px;
 }
+
 #spring-2025-campaign .inner-photo-overflow-container {
   position: relative;
 
@@ -154,6 +155,23 @@
   place-self: center;
 
   text-align: center;
+}
+
+/* fix for Firefox lack of support for svh units */
+@-moz-document url-prefix() {
+  #spring-2025-campaign .outer-photo-overflow-container {
+    top: 90dvh;
+
+    height: 100dvh;
+  }
+
+  #spring-2025-campaign .inner-photo-overflow-container {
+    height: 30dvh;
+  }
+
+  #spring-2025-campaign .main-text-container {
+    margin-top: min(calc(55vw - 10dvh), calc(570px - 10dvh));
+  }
 }
 
 #spring-2025-campaign h2 {
