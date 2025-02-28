@@ -53,7 +53,8 @@
 }
 
 #hero .logo-container .fields-logo-sky {
-  width: 100%;
+  width: min(80vw, 90svh);
+  max-width: 1000px;
   aspect-ratio: 1186 / 117;
 
   background-image: url("/assets/img/hero/fields_logo_sky.svg");
@@ -62,7 +63,9 @@
 }
 
 #hero .logo-container .fields_logo_text_01 {
-  width: 90%;
+  width: min(calc(80vw * 0.9), calc(90svh * 0.9));
+  max-width: calc(1000px * 0.9);
+
   aspect-ratio: 1080 / 385;
 
   margin: 7% 0;
@@ -71,7 +74,9 @@
 }
 
 #hero .logo-container .fields-logo-ground {
-  width: 100%;
+  width: min(80vw, 90svh);
+  max-width: 1000px;
+
   aspect-ratio: 1186 / 117;
 
   background-image: url("/assets/img/hero/fields_logo_ground.svg");
@@ -80,7 +85,9 @@
 }
 
 #hero .logo-container .fields_logo_text_02 {
-  width: 50%;
+  width: min(calc(80vw * 0.5), calc(90svh * 0.5));
+  max-width: calc(1000px * 0.5);
+
   aspect-ratio: 506 / 61;
 
   background-image: url("/assets/img/hero/fields_logo_text_02.svg");
