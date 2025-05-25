@@ -1029,6 +1029,10 @@ h6 {
   background-image: url("../img/team/endo_2.svg");
 }
 
+.lauren-illustration {
+  background-image: url("../img/team/lauren_1.svg");
+}
+
 /* .point-title {
   text-transform: uppercase;
   justify-self: left;
