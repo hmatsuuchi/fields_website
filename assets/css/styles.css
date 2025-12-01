@@ -30,6 +30,9 @@ body {
   /* background-color: #f8f3d4; */
   /* saturated yellow */
   background-color: #ffde7d;
+
+  width: 100vw;
+  overflow-y: hidden;
 }
 
 section {
