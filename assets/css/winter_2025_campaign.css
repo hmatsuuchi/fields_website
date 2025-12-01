@@ -1,0 +1,605 @@
+/* #00b8a9 - teal */
+/* #F8F3D4 - beige */
+/* #F6416C - red */
+/* #FFDE7D - yellow */
+
+/* #B1B2FF - Purple */
+/* #AAC4FF - Blue */
+/* #D2DAFF - Light Purple */
+/* #EEF1FF - Light Grey */
+
+/* Noto Serif Japanese Font, Noto Sans Japanese Font */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap");
+
+#winter-2025-campaign {
+  display: grid;
+}
+
+/* ======= PHOTO CONTAINER ======= */
+
+#winter-2025-campaign .outer-photo-overflow-container {
+  position: absolute;
+
+  overflow: hidden;
+
+  top: 90svh;
+  right: 0;
+
+  width: 100vw;
+  height: 100svh;
+  max-height: 1000px;
+}
+
+#winter-2025-campaign .inner-photo-overflow-container {
+  position: relative;
+
+  top: 0;
+  right: 0;
+
+  width: 100%;
+  max-width: 1200px;
+  height: 30svh;
+
+  margin: 0 auto;
+}
+
+#winter-2025-campaign .polaroid {
+  position: absolute;
+
+  border: solid min(3vw, calc(1200px * 0.03)) #f0f0f0;
+
+  aspect-ratio: 1 / 1;
+
+  background-color: #f0f0f0;
+  background-repeat: no-repeat;
+
+  box-shadow: 0.25rem 0.25rem 0.5rem 0.25rem rgba(0, 0, 0, 0.2);
+}
+
+@supports (-webkit-backdrop-filter: none) {
+  #winter-2025-campaign .polaroid {
+    border-bottom: solid min(3vw, calc(1200px * 0.03)) #fff;
+  }
+}
+
+#winter-2025-campaign .photo {
+  aspect-ratio: 1 / 1;
+
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+
+  background-size: cover;
+}
+
+/* ------- Photo 1 ------- */
+
+#winter-2025-campaign .photo-1 {
+  z-index: 3;
+
+  width: 35vw;
+  max-width: calc(1200px * 0.35);
+
+  top: min(3vw, calc(1200px * 0.03));
+  left: max(-3vw, calc(-1200px * 0.03));
+
+  transform: rotate(-5deg);
+}
+
+#winter-2025-campaign .photo-1 .photo {
+  width: 35vw;
+  max-width: calc(1200px * 0.35);
+
+  background-image: url("/assets/img/spring_2025_campaign/02_700.jpg");
+  background-position: 40% 50%;
+}
+
+/* ------- Photo 2 ------- */
+
+#winter-2025-campaign .photo-2 {
+  z-index: 2;
+
+  width: 35vw;
+  max-width: calc(1200px * 0.35);
+
+  top: min(2vw, calc(1200px * 0.02));
+  left: min(
+    calc(
+      (100vw - min(35vw, 1200px * 0.35) - min(3vw, calc(1200px * 0.03))) / 2
+    ),
+    calc(
+      (1200px - min(35vw, 1200px * 0.35) - min(3vw, calc(1200px * 0.03))) / 2
+    )
+  );
+
+  transform: rotate(1deg);
+}
+
+#winter-2025-campaign .photo-2 .photo {
+  width: 35vw;
+  max-width: calc(1200px * 0.35);
+
+  background-image: url("/assets/img/spring_2025_campaign/03_700.jpg");
+  background-position: 70% 50%;
+}
+
+/* ------- Photo 3 ------- */
+
+#winter-2025-campaign .photo-3 {
+  z-index: 1;
+
+  width: 35vw;
+  max-width: calc(1200px * 0.35);
+
+  top: min(3vw, calc(1200px * 0.03));
+  right: max(-3vw, calc(-1200px * 0.03));
+
+  transform: rotate(5deg);
+}
+
+#winter-2025-campaign .photo-3 .photo {
+  width: 35vw;
+  max-width: calc(1200px * 0.35);
+
+  background-image: url("/assets/img/spring_2025_campaign/01_700.jpg");
+  background-position: 70% 50%;
+}
+
+/* ======= SEA CONTAINER ======= */
+
+#winter-2025-campaign .winter-2025-top-container {
+  background-color: #f5eedc;
+
+  max-height: 1000px;
+
+  display: grid;
+}
+
+#winter-2025-campaign .main-text-container {
+  margin-top: min(calc(55vw - 10svh), calc(570px - 10svh));
+  margin-bottom: min(11vw, 80px);
+
+  place-self: center;
+
+  text-align: center;
+}
+
+/* fix for Firefox lack of support for svh units */
+@-moz-document url-prefix() {
+  #winter-2025-campaign .outer-photo-overflow-container {
+    top: 90dvh;
+
+    height: 100dvh;
+  }
+
+  #winter-2025-campaign .inner-photo-overflow-container {
+    height: 30dvh;
+  }
+
+  #winter-2025-campaign .main-text-container {
+    margin-top: min(calc(55vw - 10dvh), calc(570px - 10dvh));
+  }
+}
+
+#winter-2025-campaign h2 {
+  color: #4f091d;
+
+  padding: 0;
+
+  /* font-family: "Noto Serif JP", serif; */
+  font-family: "Noto Sans JP", sans-serif;
+
+  font-size: min(12vw, 7rem);
+  font-weight: 400;
+  font-style: normal;
+}
+
+#winter-2025-campaign h3 {
+  color: #4f091d;
+
+  /* font-family: "Noto Serif JP", serif; */
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: min(7vw, 4rem);
+  font-weight: 400;
+  font-style: normal;
+
+  margin-bottom: min(9vw, 5rem);
+}
+
+#winter-2025-campaign h4 {
+  color: #4f091d;
+
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+
+  font-size: min(4.5vw, 2.25rem);
+}
+
+/* ======= SAND CONTAINER ======= */
+
+#winter-2025-campaign .winter-2025-bottom-container {
+  padding-top: 2rem;
+
+  background-color: #dd4a48;
+
+  display: grid;
+}
+
+#winter-2025-campaign .bottom-point-container {
+  padding: 1rem;
+}
+
+#winter-2025-campaign .bottom-point-container:nth-child(3) {
+  grid-row: 2;
+}
+
+#winter-2025-campaign .sand-point-content {
+  aspect-ratio: 1 / 1;
+
+  border: solid 4px #4f091d;
+  border-radius: 50%;
+
+  background-color: #f5eedc;
+
+  color: #4f091d;
+
+  display: grid;
+  align-content: center;
+}
+
+#winter-2025-campaign .sand-point-content h5,
+#winter-2025-campaign .sand-point-content p {
+  text-align: center;
+
+  margin: 0;
+  padding: 0;
+}
+
+#winter-2025-campaign .sand-point-content h5 {
+  margin-bottom: 0.5rem;
+
+  font-size: min(8vw, 99rem);
+}
+
+#winter-2025-campaign .sand-point-content p {
+  padding: 0 min(8vw, 99rem);
+
+  font-size: min(4.4vw, 99rem);
+}
+
+#winter-2025-campaign .sand-overflow-container-outer {
+  position: absolute;
+
+  pointer-events: none;
+
+  overflow: hidden;
+
+  left: 0;
+
+  margin-top: -12rem;
+
+  width: 100vw;
+  height: 2400px;
+
+  display: grid;
+  justify-items: center;
+}
+
+#winter-2025-campaign .sand-overflow-container-inner {
+  position: relative;
+
+  width: 100vw;
+  height: 100%;
+
+  margin-top: 12rem;
+
+  max-width: 1200px;
+
+  display: grid;
+}
+
+#winter-2025-campaign .polaroid-small {
+  position: absolute;
+
+  border: solid min(1.5vw, 0.5rem) #f0f0f0;
+
+  box-shadow: 0.25rem 0.25rem 0.5rem 0.25rem rgba(0, 0, 0, 0.2);
+
+  aspect-ratio: 1 / 1;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* ------- Photo 4 ------- */
+#winter-2025-campaign #photo-04 {
+  width: 37vw;
+
+  right: -1rem;
+  top: min(-12vw, -2.9rem);
+
+  transform: rotate(5deg);
+
+  background-image: url("/assets/img/spring_2025_campaign/04_adjusted_500.jpg");
+  background-position: 50% 50%;
+}
+
+/* ------- Photo 5 ------- */
+#winter-2025-campaign #photo-05 {
+  width: 40vw;
+
+  left: -1rem;
+  top: max(80vw, 14.75rem);
+
+  transform: rotate(-5deg);
+
+  background-image: url("/assets/img/spring_2025_campaign/08_adjusted_500.jpg");
+  background-position: 30% 50%;
+}
+
+/* ------- Photo 6 ------- */
+#winter-2025-campaign #photo-06 {
+  width: 35vw;
+
+  right: 1.5rem;
+  top: max(185vw, 34.75rem);
+
+  transform: rotate(2deg);
+
+  background-image: url("/assets/img/spring_2025_campaign/05_adjusted_500.jpg");
+  background-position: 50% 50%;
+}
+
+/* ======= CALL TO ACTION CONTAINER ======= */
+#winter-2025-campaign .call-to-action-container {
+  width: 100vw;
+  max-width: 1200px;
+
+  background-color: #dd4a48;
+
+  display: grid;
+  place-content: center;
+}
+
+#winter-2025-campaign .call-to-action-container a {
+  margin: 1rem 1rem 3rem 1rem;
+
+  background-color: #f5eedc;
+
+  padding: 1rem 3rem;
+
+  border-radius: 99rem;
+  border: solid 3px #4f091d;
+
+  box-shadow: 0.25rem 0.25rem 0.5rem 0.25rem rgba(0, 0, 0, 0.2);
+
+  color: #4f091d;
+  font-size: min(6vw, 1.75rem);
+  text-align: center;
+
+  cursor: pointer;
+
+  -webkit-tap-highlight-color: transparent;
+
+  transition: 100ms ease;
+}
+
+#winter-2025-campaign .call-to-action-container a:hover {
+  box-shadow: 0.1rem 0.1rem 0.1rem 0 rgba(0, 0, 0, 0.3);
+  transform: translate(0.1rem, 0.1rem);
+}
+
+@media screen and (min-width: 600px) {
+  #winter-2025-campaign .winter-2025-bottom-container {
+    padding-top: 3rem;
+
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #winter-2025-campaign .bottom-point-container:nth-child(3) {
+    grid-column: 1 / 3;
+
+    width: calc(50vw - 2rem);
+
+    margin-top: -2.5rem;
+
+    justify-self: center;
+  }
+
+  #winter-2025-campaign .sand-point-content {
+    align-content: center;
+  }
+
+  #winter-2025-campaign
+    .bottom-point-container:nth-child(3)
+    .sand-point-content {
+    align-content: start;
+  }
+
+  #winter-2025-campaign .sand-point-content h5 {
+    font-size: 4.5vw;
+  }
+
+  #winter-2025-campaign
+    .bottom-point-container:nth-child(3)
+    .sand-point-content
+    h5 {
+    margin-top: max(5.5vw, 1.9rem);
+  }
+
+  #winter-2025-campaign .sand-point-content p {
+    padding: 0 5vw;
+
+    font-size: 2.3vw;
+  }
+
+  #winter-2025-campaign
+    .bottom-point-container:nth-child(3)
+    .sand-point-content
+    p {
+    padding: 0 5.5vw;
+  }
+
+  #winter-2025-campaign .sand-overflow-container-outer {
+    height: 1200px;
+  }
+
+  /* ------- Photo 4 ------- */
+  #winter-2025-campaign #photo-04 {
+    width: 20vw;
+  }
+
+  /* ------- Photo 5 ------- */
+  #winter-2025-campaign #photo-05 {
+    width: 30vw;
+
+    top: max(44vw, 16rem);
+  }
+
+  /* ------- Photo 6 ------- */
+  #winter-2025-campaign #photo-06 {
+    width: 25vw;
+
+    right: 2rem;
+    top: max(70vw, 27rem);
+  }
+
+  #winter-2025-campaign .call-to-action-container a {
+    margin-top: 3rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  #winter-2025-campaign .winter-2025-bottom-container {
+    padding-top: 3rem;
+
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #winter-2025-campaign .sand-point-content {
+    align-content: start;
+  }
+
+  #winter-2025-campaign .bottom-point-container:nth-child(3) {
+    grid-column: 2;
+    grid-row: 1;
+
+    margin-top: revert;
+
+    width: auto;
+  }
+
+  #winter-2025-campaign .sand-point-content h5 {
+    margin-top: min(3.5vw, 4rem);
+
+    font-size: 3vw;
+  }
+
+  #winter-2025-campaign
+    .bottom-point-container:nth-child(3)
+    .sand-point-content
+    h5 {
+    margin-top: min(3.5vw, 4rem);
+
+    font-size: 3vw;
+  }
+
+  #winter-2025-campaign .sand-point-content p {
+    padding: 0 min(2vw, 2rem);
+
+    font-size: max(1.5vw, 0.8rem);
+  }
+
+  #winter-2025-campaign
+    .bottom-point-container:nth-child(3)
+    .sand-point-content
+    p {
+    padding: 0 min(2vw, 2rem);
+
+    font-size: max(1.6vw, 0.9rem);
+  }
+
+  #winter-2025-campaign .sand-overflow-container-outer {
+    height: 950px;
+  }
+
+  /* ------- Photo 4 ------- */
+  #winter-2025-campaign #photo-04 {
+    width: 15.5vw;
+
+    top: min(-12vw, -3rem);
+  }
+
+  /* ------- Photo 5 ------- */
+  #winter-2025-campaign #photo-05 {
+    width: 20vw;
+
+    top: max(26vw, 14rem);
+  }
+
+  /* ------- Photo 6 ------- */
+  #winter-2025-campaign #photo-06 {
+    justify-self: center;
+
+    width: 20vw;
+
+    transform: rotate(-2deg);
+
+    top: max(35vw, 22rem);
+    right: unset;
+
+    margin-left: max(56vw, 38rem);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #winter-2025-campaign .sand-point-content h5 {
+    margin-top: 4rem;
+
+    font-size: 2.3rem;
+  }
+
+  #winter-2025-campaign
+    .bottom-point-container:nth-child(3)
+    .sand-point-content
+    h5 {
+    margin-top: 4rem;
+
+    font-size: 2.3rem;
+  }
+
+  #winter-2025-campaign .sand-point-content p {
+    padding: 0 2rem;
+
+    font-size: 1.15rem;
+  }
+
+  #winter-2025-campaign
+    .bottom-point-container:nth-child(3)
+    .sand-point-content
+    p {
+    padding: 0 2rem;
+
+    font-size: 1.15rem;
+  }
+
+  /* ------- Photo 4 ------- */
+  #winter-2025-campaign #photo-04 {
+    width: 12rem;
+
+    top: -8rem;
+  }
+
+  /* ------- Photo 5 ------- */
+  #winter-2025-campaign #photo-05 {
+    width: 15rem;
+
+    top: 20rem;
+  }
+
+  /* ------- Photo 6 ------- */
+  #winter-2025-campaign #photo-06 {
+    width: 15rem;
+
+    margin-left: 41rem;
+    top: 26rem;
+  }
+}
