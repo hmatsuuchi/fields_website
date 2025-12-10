@@ -567,6 +567,7 @@ a {
   overflow-x: hidden;
 
   cursor: pointer;
+  user-select: none;
 }
 
 .tab-image-container {
