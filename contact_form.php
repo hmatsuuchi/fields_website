@@ -37,7 +37,7 @@ try {
     $mail->Username = $config['smtp_username'];
     $mail->Password = $config['smtp_password'];
     $mail->SMTPSecure = 'tls';
-    $mail->Port = 587;
+    $mail->Port = $config['smtp_port'];
 
     // Email headers
     $mail->setFrom('noreply@fields.jp', 'Fields English');
