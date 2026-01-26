@@ -6,6 +6,8 @@ require __DIR__ . '/phpmailer/src/Exception.php';
 require __DIR__ . '/phpmailer/src/PHPMailer.php';
 require __DIR__ . '/phpmailer/src/SMTP.php';
 
+$config = require __DIR__ . '/config.php';
+
 if (
     empty($_POST['form_name']) ||
     empty($_POST['form_email']) ||
@@ -32,8 +34,8 @@ try {
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'info@fields.jp';
-    $mail->Password = 'xrenvazpqrcekljd';
+    $mail->Username = $config['smtp_username'];
+    $mail->Password = $config['smtp_password'];
     $mail->SMTPSecure = 'tls';
     $mail->Port = 587;
 
