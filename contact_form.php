@@ -23,6 +23,10 @@ $message = htmlspecialchars($_POST['form_message'], ENT_QUOTES);
 
 $mail = new PHPMailer(true);
 
+// IMPORTANT: UTF-8 for Japanese
+$mail->CharSet = 'UTF-8';
+$mail->Encoding = 'base64';
+
 try {
     // Tell PHPMailer to use SMTP
     $mail->isSMTP();
