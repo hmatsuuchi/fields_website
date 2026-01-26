@@ -1,26 +1,54 @@
 <?php
-    // Check for empty fields
-    if(empty($_POST['form_name'])      ||
-    empty($_POST['form_email'])     ||
-    empty($_POST['form_message'])   ||
-    !filter_var($_POST['form_email'],FILTER_VALIDATE_EMAIL))
-    {
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require __DIR__ . '/phpmailer/src/Exception.php';
+require __DIR__ . '/phpmailer/src/PHPMailer.php';
+require __DIR__ . '/phpmailer/src/SMTP.php';
+
+if (
+    empty($_POST['form_name']) ||
+    empty($_POST['form_email']) ||
+    empty($_POST['form_message']) ||
+    !filter_var($_POST['form_email'], FILTER_VALIDATE_EMAIL)
+) {
     echo "FAILURE";
-    return false;
-    }
+    exit;
+}
 
-    $name = strip_tags(htmlspecialchars($_POST['form_name']));
-    $email_address = strip_tags(htmlspecialchars($_POST['form_email']));
-    $phone = strip_tags(htmlspecialchars($_POST['form_phone']));
-    $message = strip_tags(htmlspecialchars($_POST['form_message']));
+$name = htmlspecialchars($_POST['form_name'], ENT_QUOTES);
+$email = htmlspecialchars($_POST['form_email'], ENT_QUOTES);
+$phone = htmlspecialchars($_POST['form_phone'] ?? '', ENT_QUOTES);
+$message = htmlspecialchars($_POST['form_message'], ENT_QUOTES);
 
-    // Create the email and send the message
-    $to = 'info@fields.jp';
-    $email_subject = "Website Contact Form:  $name";
-    $email_body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email_address\n\nPhone: $phone\n\nMessage:\n$message";
-    $headers = "From: noreply@fields.jp\n";
-    $headers .= "Reply-To: $email_address";   
-    mail($to,$email_subject,$email_body,$headers);
+$mail = new PHPMailer(true);
+
+try {
+    // Tell PHPMailer to use SMTP
+    $mail->isSMTP();
+    $mail->Host = 'smtp.gmail.com';
+    $mail->SMTPAuth = true;
+    $mail->Username = 'info@fields.jp';
+    $mail->Password = 'xrenvazpqrcekljd';
+    $mail->SMTPSecure = 'tls';
+    $mail->Port = 587;
+
+    // Email headers
+    $mail->setFrom('noreply@fields.jp', 'Fields English');
+    $mail->addAddress('info@fields.jp');
+    $mail->addReplyTo($email, $name);
+
+    // Email content
+    $mail->Subject = "Website Contact Form: $name";
+    $mail->Body =
+        "Name: $name\n" .
+        "Email: $email\n" .
+        "Phone: $phone\n\n" .
+        "Message:\n$message";
+
+    $mail->send();
     echo "SUCCESS";
-    return true;    
-?>
+
+} catch (Exception $e) {
+    echo "FAILURE";
+}

@@ -223,12 +223,20 @@ function sendContact() {
   }
 
   if (isValid()) {
-    // console.log("VALID");
     $.ajax({
       type: "POST",
       url: "contact_form.php",
       data: data,
-      success: formSuccess(),
+      success: function(response) {
+        if (response.trim() === "SUCCESS") {
+          formSuccess();
+        } else {
+          alert("送信に失敗しました。もう一度お試しください。");
+        }
+      },
+      error: function() {
+        alert("通信エラーが発生しました。");
+      }
     });
   } else {
     // console.log("INVALID");
