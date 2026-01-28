@@ -161,6 +161,10 @@ function removeHighlight(galleryNumber) {
 
 // CONTACT FORM //
 function sendContact() {
+  // disables submit button to prevent multiple submissions
+  const submitButton = document.getElementById("submit-form-button");
+  submitButton.classList.add("disabled");
+
   // check if the value is empty //
   function isNotEmpty(value) {
     if (value == null || typeof value == "undefined") return false;
@@ -227,24 +231,29 @@ function sendContact() {
       type: "POST",
       url: "contact_form.php",
       data: data,
-      success: function(response) {
+      success: function (response) {
         if (response.trim() === "SUCCESS") {
           formSuccess();
         } else {
           alert("送信に失敗しました。もう一度お試しください。");
         }
       },
-      error: function() {
+      error: function () {
         alert("通信エラーが発生しました。");
-      }
+        // removes submit button disabled state
+        submitButton.classList.remove("disabled");
+      },
     });
   } else {
-    // console.log("INVALID");
+    // removes submit button disabled state
+    submitButton.classList.remove("disabled");
   }
 }
 
 // STANDALONE NAME CHECK //
 function isEmptyStandalone(fieldName) {
+  const submitButton = document.getElementById("submit-form-button");
+
   function isEmpty(fieldValue) {
     return fieldValue == "";
   }
@@ -255,16 +264,22 @@ function isEmptyStandalone(fieldName) {
   if (isEmpty(field.value)) {
     field.classList.add("field-error");
     document.getElementById("error-message").style.display = "block";
+    // removes submit button disabled state
+    submitButton.classList.remove("disabled");
   } else {
     field.classList.remove("field-error");
     if (!otherErrors.length > 0) {
       document.getElementById("error-message").style.display = "none";
     }
+    // removes submit button disabled state
+    submitButton.classList.remove("disabled");
   }
 }
 
 // STANDALONE EMAIL CHECK //
 function isEmailStandalone() {
+  const submitButton = document.getElementById("submit-form-button");
+
   function isEmail(email) {
     let regex =
       /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -277,11 +292,15 @@ function isEmailStandalone() {
   if (!isEmail(email.value)) {
     email.classList.add("field-error");
     document.getElementById("error-message").style.display = "block";
+    // removes submit button disabled state
+    submitButton.classList.remove("disabled");
   } else {
     email.classList.remove("field-error");
     if (!otherErrors.length > 0) {
       document.getElementById("error-message").style.display = "none";
     }
+    // removes submit button disabled state
+    submitButton.classList.remove("disabled");
   }
 }
 
@@ -294,7 +313,7 @@ function changePrice(
   fullPrice,
   trialNumber,
   periodOne,
-  periodTwo
+  periodTwo,
 ) {
   console.log(`BASE PRICE: ${basePrice}`);
   console.log(`SERVICE NAME: ${serviceName}`);
@@ -323,7 +342,7 @@ function changePrice(
   var i;
   for (i = 0; i < subtotal.length; i++) {
     subtotal[i].innerHTML = internationalNumberFormat.format(
-      basePrice + entFee
+      basePrice + entFee,
     );
   }
 
@@ -331,7 +350,7 @@ function changePrice(
   var i;
   for (i = 0; i < total.length; i++) {
     total[i].innerHTML = internationalNumberFormat.format(
-      (basePrice + entFee) * 1.1
+      (basePrice + entFee) * 1.1,
     );
   }
 
@@ -366,7 +385,7 @@ function changePrice(
   // updates total discount figure
   let discountBadge = document.getElementById("dh-discount");
   let discountValue = internationalNumberFormat.format(
-    (entFee + (fullPrice - basePrice)) * 1.1
+    (entFee + (fullPrice - basePrice)) * 1.1,
   );
   discountBadge.innerHTML = discountValue;
 }

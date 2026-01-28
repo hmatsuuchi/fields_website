@@ -1243,6 +1243,10 @@ h6 {
   margin-top: 1rem;
 }
 
+#submit-form-button.disabled {
+  pointer-events: none;
+}
+
 .submit-form {
   color: #ffffff;
   background-color: #f6416c;
@@ -1251,6 +1255,7 @@ h6 {
   font-size: 1.2rem;
   border: none;
   cursor: pointer;
+  user-select: none;
 
   box-shadow: 0.15rem 0.15rem 0.4rem 0.1rem rgba(0, 0, 0, 0.3);
 

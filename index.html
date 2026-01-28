@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
   <head>
     <!-- Google Tag Manager -->
@@ -1943,7 +1943,13 @@
               rows="7"
               onblur="isEmptyStandalone('form-message')"
             ></textarea>
-            <div class="submit-form" onclick="sendContact()">送信</div>
+            <div
+              id="submit-form-button"
+              class="submit-form"
+              onclick="sendContact()"
+            >
+              送信
+            </div>
             <div class="error-message" id="error-message">
               必須事項が記入されていないか誤りがあります。
             </div>
