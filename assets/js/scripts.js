@@ -233,6 +233,7 @@ function sendContact() {
       data: data,
       success: function (response) {
         if (response.trim() === "SUCCESS") {
+          dataLayer.push({ event: "fields_form_submit" });
           formSuccess();
         } else {
           alert("送信に失敗しました。もう一度お試しください。");

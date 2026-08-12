@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ESP32 Stepper Controller</title>
+    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: sans-serif;
+        max-width: 420px;
+        margin: 40px auto;
+        padding: 0 20px;
+        color: #333;
+      }
+
+      h2 {
+        margin-bottom: 24px;
+      }
+
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 6px;
+      }
+
+      .field {
+        margin-bottom: 20px;
+      }
+
+      input[type="number"] {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+      }
+
+      .direction-buttons {
+        display: flex;
+        gap: 12px;
+      }
+
+      .direction-btn {
+        flex: 1;
+        padding: 12px;
+        font-size: 16px;
+        border: 2px solid #ccc;
+        border-radius: 6px;
+        background: white;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+
+      .direction-btn.selected {
+        border-color: #4285f4;
+        background: #e8f0fe;
+        color: #4285f4;
+        font-weight: bold;
+      }
+
+      button#sendBtn {
+        width: 100%;
+        padding: 14px;
+        background: #4285f4;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 8px;
+      }
+
+      button#sendBtn:hover {
+        background: #3367d6;
+      }
+
+      button#sendBtn:disabled {
+        background: #aaa;
+        cursor: not-allowed;
+      }
+
+      #status {
+        margin-top: 16px;
+        font-size: 14px;
+        min-height: 20px;
+      }
+
+      #connection {
+        font-size: 12px;
+        color: #aaa;
+        margin-bottom: 24px;
+      }
+
+      #connection.connected {
+        color: #34a853;
+      }
+
+      #connection.disconnected {
+        color: #ea4335;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>ESP32 Stepper Controller</h2>
+    <p id="connection" class="disconnected">⚪ Connecting to MQTT broker...</p>
+
+    <div class="field">
+      <label>Direction:</label>
+      <div class="direction-buttons">
+        <button
+          class="direction-btn selected"
+          id="btn-cw"
+          onclick="selectDirection(1)"
+        >
+          ↻ Clockwise
+        </button>
+        <button
+          class="direction-btn"
+          id="btn-ccw"
+          onclick="selectDirection(-1)"
+        >
+          ↺ Counter-clockwise
+        </button>
+      </div>
+    </div>
+
+    <div class="field">
+      <label>Degrees (1–1080):</label>
+      <input type="number" id="degrees" min="1" max="1080" value="180" />
+    </div>
+
+    <button id="sendBtn" onclick="sendCommand()" disabled>Send to ESP32</button>
+    <p id="status"></p>
+
+    <script>
+      const BROKER_HOST = "eec04871.ala.asia-southeast1.emqxsl.com";
+      const BROKER_PORT = 8084;
+      const USERNAME = "esp32_client";
+      const PASSWORD = "@lasW4A@&Q1LWrOBuLoACEmbWoHN64iI";
+      const TOPIC = "esp32/stepper";
+
+      let direction = 1;
+      let client = null;
+
+      // Connect to EMQX
+      const url = `wss://${BROKER_HOST}:${BROKER_PORT}/mqtt`;
+
+      client = mqtt.connect(url, {
+        username: USERNAME,
+        password: PASSWORD,
+        clientId: "web_" + Math.random().toString(16).slice(2),
+        clean: true,
+        reconnectPeriod: 3000,
+      });
+
+      client.on("connect", () => {
+        document.getElementById("connection").textContent =
+          "🟢 Connected to MQTT broker";
+        document.getElementById("connection").className = "connected";
+        document.getElementById("sendBtn").disabled = false;
+      });
+
+      client.on("disconnect", () => {
+        document.getElementById("connection").textContent = "🔴 Disconnected";
+        document.getElementById("connection").className = "disconnected";
+        document.getElementById("sendBtn").disabled = true;
+      });
+
+      client.on("error", (err) => {
+        document.getElementById("connection").textContent =
+          "🔴 Connection error: " + err.message;
+        document.getElementById("connection").className = "disconnected";
+      });
+
+      // Direction selection
+      function selectDirection(dir) {
+        direction = dir;
+        document
+          .getElementById("btn-cw")
+          .classList.toggle("selected", dir === 1);
+        document
+          .getElementById("btn-ccw")
+          .classList.toggle("selected", dir === -1);
+      }
+
+      // Send command
+      function sendCommand() {
+        const degrees = parseInt(document.getElementById("degrees").value);
+        const btn = document.getElementById("sendBtn");
+        const status = document.getElementById("status");
+
+        if (isNaN(degrees) || degrees < 1 || degrees > 1080) {
+          status.textContent = "⚠️ Degrees must be between 1 and 1080";
+          return;
+        }
+
+        const payload = JSON.stringify({ degrees, direction });
+
+        btn.disabled = true;
+        status.textContent = "Sending...";
+
+        client.publish(TOPIC, payload, { qos: 1 }, (err) => {
+          if (err) {
+            status.textContent = "❌ Failed to send: " + err.message;
+          } else {
+            status.textContent = `✅ Sent: ${degrees}° ${direction === 1 ? "clockwise" : "counter-clockwise"}`;
+          }
+
+          // Re-enable after 2 seconds
+          setTimeout(() => {
+            btn.disabled = false;
+          }, 2000);
+        });
+      }
+    </script>
+  </body>
+</html>
