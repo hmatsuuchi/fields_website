@@ -93,6 +93,8 @@ function menuClick() {
 
 // expands & collapses service sections
 function serviceExpand(serviceName) {
+  // pushes event to dataLayer for Google Tag Manager
+  dataLayer.push({ event: "service_expand", service: serviceName });
   // gets elements
   var element = document.getElementById(serviceName + "-description");
   var button = document.getElementById(serviceName + "-button");
@@ -233,6 +235,7 @@ function sendContact() {
       data: data,
       success: function (response) {
         if (response.trim() === "SUCCESS") {
+          // pushes event to dataLayer for Google Tag Manager
           dataLayer.push({ event: "fields_form_submit" });
           formSuccess();
         } else {
