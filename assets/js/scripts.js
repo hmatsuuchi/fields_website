@@ -393,3 +393,133 @@ function changePrice(
   );
   discountBadge.innerHTML = discountValue;
 }
+
+// OPENS QUICK CONTACT FORM
+function openQuickConnectFormContainer() {
+  const quickConnectFormContainer = document.getElementById(
+    "quick-connect-form-container",
+  );
+  if (quickConnectFormContainer.classList.contains("closed")) {
+    quickConnectFormContainer.classList.add("open");
+    quickConnectFormContainer.classList.remove("closed");
+  }
+}
+
+// CLOSES QUICK CONTACT FORM
+function closeQuickConnectFormContainer() {
+  const quickConnectFormContainer = document.getElementById(
+    "quick-connect-form-container",
+  );
+  if (quickConnectFormContainer.classList.contains("open")) {
+    quickConnectFormContainer.classList.add("closed");
+    quickConnectFormContainer.classList.remove("open");
+  }
+}
+
+// CONTACT ON LINE
+function contactOnLine() {
+  // pushes event to dataLayer for Google Tag Manager
+  dataLayer.push({ event: "quick_connect_line_click" });
+
+  // Open LINE contact URL in a new tab
+  const lineUrl = "https://line.me/R/ti/p/logos94274lavish";
+  window.open(lineUrl, "_blank");
+}
+
+// SUBMITS QUICK CONTACT FORM
+function submitQuickConnectForm(event) {
+  event.preventDefault();
+
+  // disables submit button to prevent multiple submissions
+  const submitButton = document.getElementById("quick-connect-submit");
+  submitButton.disabled = true;
+
+  // check if the value is empty //
+  function isNotEmpty(value) {
+    if (value == null || typeof value == "undefined") return false;
+    return value.length > 0;
+  }
+
+  // checks if the value is an email or phone //
+  function isEmailOrPhone(contact) {
+    const emailRegex =
+      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const phoneRegex = /^[\d\-()+ ]{7,}$/; // basic phone validation
+    return (
+      emailRegex.test(String(contact).toLowerCase()) || phoneRegex.test(contact)
+    );
+  }
+
+  // gets the form value //
+  let contact = document.getElementById("quick-connect-input");
+
+  // validate field
+  let isValid = isNotEmpty(contact.value) && isEmailOrPhone(contact.value);
+
+  if (!isValid) {
+    contact.classList.add("field-error");
+
+    const errorMessage = document.getElementById("quick-connect-error");
+    errorMessage.textContent = "メールアドレスか電話番号を入力してください";
+    errorMessage.hidden = false;
+
+    submitButton.disabled = false;
+    return;
+  }
+
+  contact.classList.remove("field-error");
+
+  // Hide error message when input is valid
+  const errorMessage = document.getElementById("quick-connect-error");
+  errorMessage.hidden = true;
+
+  // Disable input and button during submission
+  contact.disabled = true;
+  submitButton.disabled = true;
+
+  // Fades out input field and submit button
+  contact.classList.add("fade-out");
+  submitButton.classList.add("fade-out");
+
+  data = {
+    form_contact: contact.value,
+  };
+
+  function formSuccess() {
+    // clears form field
+    contact.value = "";
+
+    // closes quick connect form container
+    closeQuickConnectFormContainer();
+
+    // pushes event to dataLayer for Google Tag Manager
+    dataLayer.push({ event: "quick_connect_form_submit" });
+
+    // shows success message
+    alert("お問い合わせありがとうございます。折り返しご連絡いたします。");
+  }
+
+  $.ajax({
+    type: "POST",
+    url: "quick_connect.php",
+    data: data,
+    success: function (response) {
+      if (response.trim() === "SUCCESS") {
+        formSuccess();
+      } else {
+        alert("送信に失敗しました。もう一度お試しください。");
+        contact.disabled = false;
+        contact.classList.remove("fade-out");
+        submitButton.disabled = false;
+        submitButton.classList.remove("fade-out");
+      }
+    },
+    error: function () {
+      alert("通信エラーが発生しました。");
+      contact.disabled = false;
+      contact.classList.remove("fade-out");
+      submitButton.disabled = false;
+      submitButton.classList.remove("fade-out");
+    },
+  });
+}

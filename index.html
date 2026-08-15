@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="assets/css/styles.css?ver=058" />
     <link rel="stylesheet" href="assets/css/winter_2025_campaign.css?ver=003" />
     <link rel="stylesheet" href="assets/css/hero.css?ver=020" />
+    <link rel="stylesheet" href="assets/css/quick_connect.css?ver=002" />
 
     <meta
       name="description"
@@ -87,7 +88,7 @@
     <!-- End Google Tag Manager (noscript) -->
 
     <!-- NAVIGATION -->
-    <nav id="navigation">
+    <!-- <nav id="navigation">
       <div id="navigation-primary-container">
         <div id="menu-list-container">
           <a class="nav-item" id="nav-item-1" onclick="closeNav()" href="#hero"
@@ -139,7 +140,58 @@
           </div>
         </div>
       </div>
-    </nav>
+    </nav> -->
+
+    <!-- QUICK CONNECT -->
+    <section id="quick-connect-section">
+      <div
+        id="quick-connect-form-container"
+        class="closed"
+      >
+        <div class="quick-connect-head">
+          <span class="title">お問い合わせ・無料体験のご予約受付中</span>
+          <button class="close-button" onclick="closeQuickConnectFormContainer()">×</button>
+        </div>
+        <div class="quick-connect-body">
+          <button id="line-button" onclick="contactOnLine()">
+            <span class="line-icon">
+              <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                <!-- simplified LINE-style speech bubble -->
+                <path fill="#fff" d="M16 4C8.9 4 3.2 9 3.2 15.2c0 3.4 1.9 6.4 4.9 8.4-.2 1-.8 2.6-1.6 3.7-.2.3.1.7.4.6 1.9-.8 3.6-2 4.7-2.9 1.3.4 2.8.6 4.4.6 7.1 0 12.8-5 12.8-11.2S23.1 4 16 4z"></path>
+                <circle cx="12" cy="15" r="1.6" fill="#06C755"></circle>
+                <circle cx="20" cy="15" r="1.6" fill="#06C755"></circle>
+                <path d="M12.5 20c2 1.6 5 1.6 7 0" stroke="#06C755" stroke-width="1.6" stroke-linecap="round" fill="none"></path>
+              </svg>
+            </span>LINEでお問い合わせ</button>
+          <div class="divider-container">
+            <div class="line"></div><div>または</div><div class="line"></div>
+          </div>
+          <form id="quick-connect-form" onsubmit="submitQuickConnectForm(event)">
+            <input id="quick-connect-input" type="text" placeholder="メールアドレスまたは電話番号" autocomplete="off" maxlength="100">
+            <div id="quick-connect-error" hidden></div>
+            <button id="quick-connect-submit" type="submit">この内容で送信する</button>
+          </form>
+          <div id="form-success"></div>
+          <div class="bottom-text">折り返しご連絡いたします</div>
+        </div>
+        </div>
+        <button
+          id="quick-connect-button"
+          onclick="openQuickConnectFormContainer()"
+        >
+          <span class="chat-icon">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <!-- generic chat bubble -->
+              <path
+                fill="#fff"
+                d="M16 5C9.4 5 4 9.8 4 15.7c0 3.2 1.7 6.1 4.4 8-.3 1.3-.9 2.9-1.8 4-.2.3.1.6.4.5 2.1-1 4-2.4 5.2-3.4 1.2.3 2.5.4 3.8.4 6.6 0 12-4.8 12-10.7S22.6 5 16 5z"
+              ></path>
+            </svg>
+          </span>
+          <span class="chat-text">お問い合わせ・無料体験</span>
+        </button>
+      </div>
+    </section>
 
     <!-- HERO -->
     <section id="hero">
@@ -470,7 +522,7 @@
               <h5>単語</h5>
               <h6>vocabulary</h6>
               <p>
-                レッスンでは毎回たくさんの語彙が出てきますし、定着を図るために何度も復習をします。確かな語彙力をつけると英語で自分を表現できるようになります。ただ決まったフレーズを覚えるのではなく、私たちの生徒さんには教室で習う語彙を使い自分自身で文章を作れるようになるよう指導しています。
+                レッスンでは毎回たくさんの語彙が出てきますし、定着を図るために何度も復習をします。確かな語彙力をつけると英語で自分を表現できるようになります。ただ決まったフレーズを覚えるのではなく、私たちの生徒さんには教室で学習する語彙を使い自分自身で文章を作れるようになるよう指導しています。
               </p>
             </div>
           </div>
@@ -928,7 +980,7 @@
               <div class="stat-title entrance-fee">20,000円</div>
               <div class="stat-subtitle">入会金</div>
             </div>
-            <div class="stat-description">20,00円でご入会いただけます。</div>
+            <div class="stat-description">20,000円でご入会いただけます。</div>
             <div class="stat-header">
               <div class="stat-title">9,000/10,000円</div>
               <div class="stat-subtitle">レッスン料</div>
@@ -2012,6 +2064,6 @@
       </div>
     </section>
 
-    <script src="assets/js/scripts.js?ver=020"></script>
+    <script src="assets/js/scripts.js?ver=023"></script>
   </body>
 </html>
