@@ -422,7 +422,7 @@ function contactOnLine() {
   dataLayer.push({ event: "quick_connect_line_click" });
 
   // Open LINE contact URL in a new tab
-  const lineUrl = "https://line.me/R/ti/p/logos94274lavish";
+  const lineUrl = "https://lin.ee/rc9IHCp";
   window.open(lineUrl, "_blank");
 }
 

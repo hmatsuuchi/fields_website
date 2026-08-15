@@ -12,6 +12,8 @@
 
   display: grid;
   justify-items: end;
+
+  pointer-events: none; /* Add this */
 }
 
 /* BUTTON */
@@ -35,6 +37,8 @@
   align-items: center;
   grid-auto-flow: column;
   grid-column-gap: 0.4rem;
+
+  pointer-events: auto; /* Add this */
 }
 
 @keyframes quick-connect-button-hover {
@@ -77,6 +81,8 @@
   margin-bottom: 1.5rem;
 
   border-radius: 1rem;
+
+  pointer-events: none;
 }
 
 #quick-connect-form-container.open {
@@ -86,6 +92,8 @@
   transition:
     opacity 180ms ease,
     transform 180ms ease;
+
+  pointer-events: auto;
 }
 
 #quick-connect-form-container.closed {
