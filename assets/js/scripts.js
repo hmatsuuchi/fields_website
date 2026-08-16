@@ -402,6 +402,9 @@ function openQuickConnectFormContainer() {
   if (quickConnectFormContainer.classList.contains("closed")) {
     quickConnectFormContainer.classList.add("open");
     quickConnectFormContainer.classList.remove("closed");
+
+    // pushes event to dataLayer for Google Tag Manager
+    dataLayer.push({ event: "quick_connect_button_press" });
   }
 }
 
