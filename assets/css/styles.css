@@ -570,6 +570,28 @@ a {
   user-select: none;
 }
 
+@keyframes learn-more-button-hover {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(0.5rem);
+  }
+  70% {
+    transform: translateY(-1rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.service-tab:hover
+  .learn-more-button:not(.button-close):not(.button-active-in):not(
+    .button-active-out
+  ) {
+  animation: learn-more-button-hover 300ms ease-out both;
+}
+
 .tab-image-container {
   grid-row: 1 / span 2;
 
