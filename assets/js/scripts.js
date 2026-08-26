@@ -470,6 +470,20 @@ function submitQuickConnectForm(event) {
     return;
   }
 
+  // hides quick connect form and bottom text
+  const quickConnectForm = document.getElementById("quick-connect-form");
+  quickConnectForm.classList.add("hidden");
+  const bottomText = document.querySelector(
+    "#quick-connect-form-container .bottom-text",
+  );
+  bottomText.classList.add("hidden");
+
+  // displays success message
+  const successMessage = document.querySelector(
+    "#quick-connect-form-container .quick-connect-body .form-success",
+  );
+  successMessage.classList.add("visible");
+
   contact.classList.remove("field-error");
 
   // Hide error message when input is valid
@@ -492,14 +506,8 @@ function submitQuickConnectForm(event) {
     // clears form field
     contact.value = "";
 
-    // closes quick connect form container
-    closeQuickConnectFormContainer();
-
     // pushes event to dataLayer for Google Tag Manager
     dataLayer.push({ event: "quick_connect_form_submit" });
-
-    // shows success message
-    alert("お問い合わせありがとうございます。折り返しご連絡いたします。");
   }
 
   $.ajax({
@@ -510,6 +518,20 @@ function submitQuickConnectForm(event) {
       if (response.trim() === "SUCCESS") {
         formSuccess();
       } else {
+        // display quick connect form and bottom text
+        const quickConnectForm = document.getElementById("quick-connect-form");
+        quickConnectForm.classList.remove("hidden");
+        const bottomText = document.querySelector(
+          "#quick-connect-form-container .bottom-text",
+        );
+        bottomText.classList.remove("hidden");
+
+        // hides success message
+        const successMessage = document.querySelector(
+          "#quick-connect-form-container .quick-connect-body .form-success",
+        );
+        successMessage.classList.remove("visible");
+
         alert("送信に失敗しました。もう一度お試しください。");
         contact.disabled = false;
         contact.classList.remove("fade-out");
@@ -518,6 +540,20 @@ function submitQuickConnectForm(event) {
       }
     },
     error: function () {
+      // display quick connect form and bottom text
+      const quickConnectForm = document.getElementById("quick-connect-form");
+      quickConnectForm.classList.remove("hidden");
+      const bottomText = document.querySelector(
+        "#quick-connect-form-container .bottom-text",
+      );
+      bottomText.classList.remove("hidden");
+
+      // hides success message
+      const successMessage = document.querySelector(
+        "#quick-connect-form-container .quick-connect-body .form-success",
+      );
+      successMessage.classList.remove("visible");
+
       alert("通信エラーが発生しました。");
       contact.disabled = false;
       contact.classList.remove("fade-out");

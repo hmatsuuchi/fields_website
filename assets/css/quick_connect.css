@@ -197,12 +197,16 @@
 }
 
 /* FORM - BODY - FORM */
-#quick-connect-form-container #quick-connect-form {
+#quick-connect-form {
   display: grid;
   grid-row-gap: 0.5rem;
 }
 
-#quick-connect-form-container #quick-connect-input {
+#quick-connect-form.hidden {
+  display: none;
+}
+
+#quick-connect-input {
   padding: 0.8rem 0.9rem;
 
   border: solid 1px #9e9e9e;
@@ -211,20 +215,20 @@
   font-size: 0.9rem;
 }
 
-#quick-connect-form-container #quick-connect-input.fade-out {
+#quick-connect-input.fade-out {
   opacity: 0.5;
 }
 
-#quick-connect-form-container #quick-connect-error {
+#quick-connect-error {
   font-size: 0.75rem;
   color: hsl(346, 91%, 61%);
 }
 
-#quick-connect-form-container #quick-connect-input.field-error {
+#quick-connect-input.field-error {
   border: solid 2px hsl(346, 91%, 61%);
 }
 
-#quick-connect-form-container #quick-connect-submit {
+#quick-connect-submit {
   padding: 0.85rem;
 
   border: none;
@@ -239,13 +243,55 @@
   background-color: hsl(346, 91%, 61%);
 }
 
-#quick-connect-form-container #quick-connect-submit.fade-out {
+#quick-connect-submit.fade-out {
   opacity: 0.5;
   cursor: default;
 }
 
-#quick-connect-form-container #quick-connect-submit:hover {
+#quick-connect-submit:hover {
   background-color: hsl(346, 81%, 61%);
+}
+
+/* FORM - BODY - FORM SUCCESS */
+#quick-connect-form-container .quick-connect-body .form-success {
+  display: none;
+
+  width: 100%;
+
+  justify-items: center;
+  grid-row-gap: 1rem;
+}
+
+#quick-connect-form-container .quick-connect-body .form-success.visible {
+  display: grid;
+}
+
+#quick-connect-form-container
+  .quick-connect-body
+  .form-success
+  .form-success-text {
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+#quick-connect-form-container
+  .quick-connect-body
+  .form-success
+  .form-success-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+
+  background-color: hsl(346, 81%, 61%);
+
+  border-radius: 50%;
+
+  padding: 0.5rem;
+
+  background-image: url("../img/contact/airplane.svg");
+  background-size: 70% auto;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* FORM - BODY - BOTTOM TEXT */
@@ -255,6 +301,11 @@
   color: rgb(130, 130, 130);
   font-size: 0.8rem;
   text-align: center;
+}
+
+/* FORM - BODY - BOTTOM TEXT */
+#quick-connect-form-container .bottom-text.hidden {
+  display: none;
 }
 
 @media (min-width: 400px) {
