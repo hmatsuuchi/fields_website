@@ -161,11 +161,66 @@ function removeHighlight(galleryNumber) {
   image.classList.remove("highlighted");
 }
 
-// CONTACT FORM //
+// Cloudflare Turnstile
+function getTurnstileToken() {
+  return new Promise(function (resolve) {
+    if (!window.turnstile) {
+      // script blocked or still loading: send the request and let the server decide
+      resolve("");
+      return;
+    }
+
+    function readToken() {
+      try {
+        return turnstile.getResponse() || "";
+      } catch (e) {
+        return "";
+      }
+    }
+
+    // managed/non-interactive widgets already ran on render: reuse that token
+    if (readToken()) {
+      resolve(readToken());
+      return;
+    }
+
+    var waited = 0;
+    var poll = setInterval(function () {
+      var token = readToken();
+      if (token) {
+        clearInterval(poll);
+        resolve(token);
+      } else if ((waited += 200) > 15000) {
+        // do not hang the button forever; the server will reject if there is no token
+        clearInterval(poll);
+        resolve("");
+      }
+    }, 200);
+
+    try {
+      turnstile.reset(); // not solved yet: run the challenge now
+    } catch (e) {
+      /* ignore */
+    }
+  });
+}
+
+function resetTurnstile() {
+  try {
+    turnstile.reset(); // drop the spent/expired token so the next attempt gets a new one
+  } catch (e) {
+    /* ignore */
+  }
+}
+
 function sendContact() {
   // disables submit button to prevent multiple submissions
   const submitButton = document.getElementById("submit-form-button");
   submitButton.classList.add("disabled");
+
+  // fades the form to indicate submission in progress
+  const contactForm = document.getElementById("contact-form-container");
+  contactForm.classList.add("sending");
 
   // check if the value is empty //
   function isNotEmpty(value) {
@@ -226,31 +281,63 @@ function sendContact() {
 
     let confirmationMessage = document.getElementById("confirmation-message");
     confirmationMessage.classList.add("show-confirmation");
+
+    // restores form to original state
+    const contactFormContainer = document.getElementById(
+      "contact-form-container",
+    );
+    contactFormContainer.classList.remove("sending");
   }
 
   if (isValid()) {
-    $.ajax({
-      type: "POST",
-      url: "contact_form.php",
-      data: data,
-      success: function (response) {
-        if (response.trim() === "SUCCESS") {
-          // pushes event to dataLayer for Google Tag Manager
-          dataLayer.push({ event: "fields_form_submit" });
-          formSuccess();
-        } else {
-          alert("送信に失敗しました。もう一度お試しください。");
-        }
-      },
-      error: function () {
-        alert("通信エラーが発生しました。");
-        // removes submit button disabled state
-        submitButton.classList.remove("disabled");
-      },
+    getTurnstileToken().then(function (turnstileToken) {
+      if (turnstileToken) {
+        data["cf-turnstile-response"] = turnstileToken;
+      }
+
+      $.ajax({
+        type: "POST",
+        url: "contact_form.php",
+        data: data,
+        success: function (response) {
+          if (response.trim() === "SUCCESS") {
+            // pushes event to dataLayer for Google Tag Manager
+            dataLayer.push({ event: "fields_form_submit" });
+            formSuccess();
+          } else {
+            // the token is single-use: drop it so a retry gets a fresh one
+            resetTurnstile();
+
+            // removes submit button disabled state so the visitor can retry
+            submitButton.classList.remove("disabled");
+
+            // restores form to original state
+            const contactForm = document.getElementById(
+              "contact-form-container",
+            );
+            contactForm.classList.remove("sending");
+
+            alert("送信に失敗しました。もう一度お試しください。");
+          }
+        },
+        error: function () {
+          alert("通信エラーが発生しました。");
+          // removes submit button disabled state
+          submitButton.classList.remove("disabled");
+
+          // restores form to original state
+          const contactForm = document.getElementById("contact-form-container");
+          contactForm.classList.remove("sending");
+        },
+      });
     });
   } else {
     // removes submit button disabled state
     submitButton.classList.remove("disabled");
+
+    // restores form to original state
+    const contactForm = document.getElementById("contact-form-container");
+    contactForm.classList.remove("sending");
   }
 }
 
@@ -270,6 +357,10 @@ function isEmptyStandalone(fieldName) {
     document.getElementById("error-message").style.display = "block";
     // removes submit button disabled state
     submitButton.classList.remove("disabled");
+
+    // restores form to original state
+    const contactForm = document.getElementById("contact-form-container");
+    contactForm.classList.remove("sending");
   } else {
     field.classList.remove("field-error");
     if (!otherErrors.length > 0) {
@@ -277,6 +368,10 @@ function isEmptyStandalone(fieldName) {
     }
     // removes submit button disabled state
     submitButton.classList.remove("disabled");
+
+    // restores form to original state
+    const contactForm = document.getElementById("contact-form-container");
+    contactForm.classList.remove("sending");
   }
 }
 
@@ -296,8 +391,13 @@ function isEmailStandalone() {
   if (!isEmail(email.value)) {
     email.classList.add("field-error");
     document.getElementById("error-message").style.display = "block";
+
     // removes submit button disabled state
     submitButton.classList.remove("disabled");
+
+    // restores form to original state
+    const contactForm = document.getElementById("contact-form-container");
+    contactForm.classList.remove("sending");
   } else {
     email.classList.remove("field-error");
     if (!otherErrors.length > 0) {
@@ -305,6 +405,10 @@ function isEmailStandalone() {
     }
     // removes submit button disabled state
     submitButton.classList.remove("disabled");
+
+    // restores form to original state
+    const contactForm = document.getElementById("contact-form-container");
+    contactForm.classList.remove("sending");
   }
 }
 

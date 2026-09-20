@@ -1235,6 +1235,13 @@ h6 {
   display: grid;
 }
 
+#contact-form-container.sending {
+  opacity: 0.5;
+  transition-duration: 500ms;
+
+  pointer-events: none;
+}
+
 #contact-form {
   display: grid;
   grid-auto-flow: row;
@@ -1273,6 +1280,7 @@ h6 {
   color: #ffffff;
   background-color: #f6416c;
   padding: 0.5rem 2rem;
+  margin-bottom: 3rem;
   border-radius: 99rem;
   font-size: 1.2rem;
   border: none;
